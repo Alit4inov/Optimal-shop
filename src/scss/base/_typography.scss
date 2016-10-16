@@ -15,6 +15,7 @@ h6, .h6,
 
 h1, .h1 {
   font-size: map-deep-get($headings, sizes, h1-font-size);
+  text-transform: uppercase;
 }
 
 h2, .h2 {
@@ -43,8 +44,10 @@ p {
 
 a {
   color: map-get($base, base-link-color);
+  text-decoration: none;
   &:hover,
   &:focus {
     text-decoration: none;
+    color: $brand-orange;
   }
 }

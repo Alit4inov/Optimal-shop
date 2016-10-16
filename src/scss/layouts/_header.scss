@@ -1,0 +1,43 @@
+header {
+
+}
+
+.top-header {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 20px 0;
+	@extend %clearfix;
+}
+
+.tel-box {
+	width: 134px;
+	float: left;
+	position: relative;
+	@extend %clearfix;
+	.tel-box-icon {
+		display: block;
+		width: 34px;
+		float: left;
+		height: 100%;
+		i {
+			position: absolute;
+			font-size: 24px;
+			background-color: $brand-orange;
+			border-radius: 3px;
+			top: 50%;
+			margin-top: -12px;
+			color: $white
+		}
+	}
+	.tel-block {
+		width: 100px;
+		float: right;
+	}
+}
+
+.tel-link {
+	display: inline-block;
+	font-size: 14px;
+	color: $dark-blue;
+	font-weight: 900;
+}

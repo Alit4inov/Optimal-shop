@@ -1,32 +1,32 @@
 // Headers
-$headings: (
-  'sizes': (
-    'h1-font-size': 30px,
-    'h2-font-size': 27px,
-    'h3-font-size': 24px,
-    'h4-font-size': 21px,
-    'h5-font-size': 17px,
-    'h6-font-size': 15px
-  ),
-  'fonts': (
-    'headings-font-family': inherit,
-    'headings-color': inherit
-  )
-);
+// $headings: (
+//   'sizes': (
+//     'h1-font-size': 30px,
+//     'h2-font-size': 27px,
+//     'h3-font-size': 24px,
+//     'h4-font-size': 21px,
+//     'h5-font-size': 17px,
+//     'h6-font-size': 15px
+//   ),
+//   'fonts': (
+//     'headings-font-family': inherit,
+//     'headings-color': inherit
+//   )
+// );
 
 // Body
-$base: (
-  'base-font-sans-serif': unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
-  'base-font-serif': unquote("'Times New Roman', Times, Baskerville, Georgia, serif"),
-  'base-text-color': #000,
-  'base-background-color': #fff,
-  'base-link-color':#39f,
-  'base-font-size': 16px,
-  'base-line-height': 1.2,
-  'base-font-family': unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
-  'vertical-rhythm': '(map-get($base, base-line-height) * 1em)',
-  'base-min-width': 320px
-);
+// $base: (
+//   'base-font-sans-serif': unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+//   'base-font-serif': unquote("'Times New Roman', Times, Baskerville, Georgia, serif"),
+//   'base-text-color': #000,
+//   'base-background-color': #fff,
+//   'base-link-color':#39f,
+//   'base-font-size': 16px,
+//   'base-line-height': 1.2,
+//   'base-font-family': unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+//   'vertical-rhythm': '(map-get($base, base-line-height) * 1em)',
+//   'base-min-width': 320px
+// );
 
 // Forms
 $forms: (
