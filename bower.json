@@ -23,6 +23,7 @@
     "jquery": "~2.2.4",
     "normalize-css": "~3.0.3",
     "include-media": "~1.4.2",
-    "owl.carousel": "^2.1.6"
+    "owl.carousel": "^2.1.6",
+    "matchHeight": "matchheight#^0.7.0"
   }
 }
