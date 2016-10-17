@@ -1,11 +1,7 @@
 header {
-
 }
 
 .top-header {
-	width: 1200px;
-	margin: 0 auto;
-	padding: 20px 0;
 	@extend %clearfix;
 }
 
@@ -39,5 +35,5 @@ header {
 	display: inline-block;
 	font-size: 14px;
 	color: $dark-blue;
-	font-weight: 900;
+	font-weight: 700;
 }

@@ -2,7 +2,6 @@
 @import './bower/include-media/dist/include-media';
 
 /* Base modules*/
-@import 'base/custom-variables';
 @import 'base/variables';
 @import 'base/functions';
 @import 'base/mixins';
@@ -34,8 +33,11 @@
 }
 .typography-list {
 	@extend .page-list;
-	background-color: map-deep-get($base, base-background-color);
+	background-color: $blue;
 }
 .icon-example {
 	font-size: 30px;
+}
+.company-name {
+	font-family: map-deep-get($base, font-Bookman);
 }
