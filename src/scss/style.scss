@@ -4,7 +4,6 @@
 /* Base modules*/
 
 @import 'base/variables';
-@import 'base/custom-variables';
 @import 'base/functions';
 @import 'base/mixins';
 @import 'base/helpers';
@@ -13,7 +12,8 @@
 @import 'base/forms';
 
 /* Components */
-@import 'components/starter-box';
+@import 'components/gallery';
+@import 'components/buttons';
 
 /* Vendors */
 @import 'vendors/icons';
@@ -35,8 +35,11 @@
 }
 .typography-list {
 	@extend .page-list;
-	background-color: map-deep-get($base, base-background-color);
+	background-color: $blue;
 }
 .icon-example {
 	font-size: 30px;
+}
+.company-name {
+	font-family: map-deep-get($base, font-Bookman);
 }
