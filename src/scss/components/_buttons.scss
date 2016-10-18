@@ -6,13 +6,35 @@
     font-weight: bold;
     font-family: (map-get($base, Roboto));
     display: inline-block;
-     @include media('<tablet') {
-    	padding: 15px 20px;
-     	font-size: 14px;
-     }
-    		
-    &-primary{
-    	background-color: $brand-orange;
-    	color: $white;
+    @include media('<tablet') {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+    &-primary {
+        background-color: $brand-orange;
+        color: $white;
+    }
+    &-submit {
+        @extend %clearfix;
+        padding: 8px 10px;
+        font-size: 14px;
+        background-color: transparent;
+        border: 1px solid $white;
+        color: $white;
+        text-align: center;
+        transition: box-shadow 0.3s, border-color 0.3s;
+        box-shadow: 0px 0px 0px 0px rgba($brand-orange, .6);
+        font-family: map-deep-get($base, 'font-Roboto');
+        font-weight: 400;
+        &:hover,
+        &:focus {
+            border-color: rgba($brand-orange, .6);
+            outline: none;
+            box-shadow: 0px 0px 10px 0px rgba($brand-orange, .6);
+        }
+        i {
+            font-size: 17px;
+            float: left;
+        }
     }
 }

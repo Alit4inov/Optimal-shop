@@ -14,6 +14,7 @@
 /* Components */
 @import 'components/gallery';
 @import 'components/buttons';
+@import 'components/question-form';
 
 /* Vendors */
 @import 'vendors/icons';
@@ -22,6 +23,8 @@
 /* Layouts */
 @import 'layouts/common';
 @import 'layouts/header';
+@import 'layouts/footer';
+
 
 .page-list {
 	@extend %listreset;
