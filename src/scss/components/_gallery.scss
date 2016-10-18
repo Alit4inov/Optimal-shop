@@ -1,0 +1,119 @@
+.slider {
+    position: relative;
+    .slide-bg {
+        min-height: 480px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        padding: 20px 10px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: $dark-blue;
+        @include media('<desktop') {
+            font-size: 16px;
+        }
+        @include media('<tablet') {
+            min-height: 400px;
+              background-position: 53% 50%;
+        }
+         @include media('<phone') {
+        	min-height: 380px;
+         	background-position: 54% 60%;
+
+         }   
+        		 
+        .container {
+            width: 100%;
+        }
+        h2.h1 {
+            margin-bottom:70px;
+            font-family: 'base-font-sans-serif';
+            letter-spacing: 2px;
+            @include media('<tablet') {
+                font-size: 16px;
+            }
+        }
+    }
+    .text-holder {
+        max-width: 650px;
+        @include media('<widescreen') {
+            max-width: 500px;
+        }
+         @include media('<tablet') {
+        	max-width: 380px;
+         
+         }
+          @include media('<phone') {
+         	max-width: 225px;
+          
+          }
+         		 
+        		
+    }
+    h1 {
+        font-size: 54px;
+        color: $dark-blue;
+        font-family: (map-get($base, font-Bookman));
+        font-weight: 400;
+        letter-spacing: 5px;
+        margin-bottom: 5px;
+        @include media('<desktop') {
+            font-size: 44px;
+        }
+        @include media('<tablet') {
+            font-size: 35px;
+        }
+        @include media('<phone') {
+       		font-size: 30px;
+       		letter-spacing: 0;
+        
+        }
+       		
+        .upper {
+            font-size: 84px;
+            @include media('<desktop') {
+                font-size: 60px;
+            }
+            @include media('<tablet') {
+                font-size: 40px;
+            }
+             @include media('<phone') {
+            	font-size: 30px;
+             
+             }
+            		
+        }
+        .colour {
+            color: $brand-orange;
+        }
+    }
+    .slogan {
+        font-weight: 900;
+        display: block;
+        margin-bottom: 33px;
+    }
+    .owl-dots {
+        margin-top: 0 !important;
+        z-index: 999;
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        .owl-dot {
+            span {
+                display: block;
+                width: 18px;
+                height: 18px;
+                background-color: $dark-blue;
+                border: 2px solid $dark-blue;
+            }
+            &:hover{
+            	opacity: .7;
+            }
+            &.active span {
+                background-color: transparent !important;
+            }
+        }
+    }
+}

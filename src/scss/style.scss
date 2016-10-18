@@ -2,6 +2,7 @@
 @import './bower/include-media/dist/include-media';
 
 /* Base modules*/
+
 @import 'base/variables';
 @import 'base/functions';
 @import 'base/mixins';
@@ -11,7 +12,8 @@
 @import 'base/forms';
 
 /* Components */
-@import 'components/starter-box';
+@import 'components/gallery';
+@import 'components/buttons';
 
 /* Vendors */
 @import 'vendors/icons';
