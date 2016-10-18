@@ -1,39 +1,327 @@
 header {
 }
-
+.left-side {
+	width: 40%;
+	float: left;
+}
+.right-side {
+	width: 60%;
+	float: right;
+}
 .top-header {
+	position: relative;
+	padding: 20px 0 20px 153px;
+	box-sizing: border-box;
 	@extend %clearfix;
 }
 
-.tel-box {
-	width: 134px;
+.contact-block {
+	display: flex;
 	float: left;
-	position: relative;
-	@extend %clearfix;
-	.tel-box-icon {
-		display: block;
-		width: 34px;
-		float: left;
-		height: 100%;
+	height: 52px;
+	align-items: center;
+}
+.icon-box {
+	display: flex;
+	align-items: center;
+	margin-right: 12px;
+	&-phone{
 		i {
-			position: absolute;
-			font-size: 24px;
+			width: 22px;
+			height: 22px;
 			background-color: $brand-orange;
 			border-radius: 3px;
-			top: 50%;
-			margin-top: -12px;
-			color: $white
+			font-size: 18px;
+			text-align: center;
+			line-height: 22px;
 		}
 	}
-	.tel-block {
-		width: 100px;
-		float: right;
+	&-mail {
+		i {
+			width: 22px;
+			height: 22px;
+			background-color: $brand-orange;
+			border-radius: 3px;
+			font-size: 12px;
+			text-align: center;
+			line-height: 22px;
+		}
+	}
+	&-login {
+		i {
+			width: 22px;
+			height: 22px;
+			background-color: $brand-orange;
+			border-radius: 3px;
+			font-size: 12px;
+			text-align: center;
+			line-height: 22px;
+		}
 	}
 }
-
-.tel-link {
-	display: inline-block;
+.tel-box {
+	margin-right: 54px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.tel-link {
+		font-size: 14px;
+		line-height: 1.2;
+		color: $dark-blue;
+		font-weight: 700;
+	}
+}
+.mail-link {
 	font-size: 14px;
 	color: $dark-blue;
 	font-weight: 700;
 }
+
+.top-nav {
+	float: left;
+	display: flex;
+	align-items: center;
+	height: 52px;
+	@extend %listreset;
+	li {
+		display: inline-block;
+		padding-right: 33px;
+	}
+	.top-nav-link {
+		font-size: 14px;
+		line-height: 26px;
+		color: $dark-blue;
+		font-weight: 700;
+	}
+}
+
+.login-block {
+	float: left;
+	display: flex;
+	height: 52px;
+	align-items: center;
+	.login-link {
+		color: $dark-blue;
+		font-size: 14px;
+	}
+	span {
+		color: $dark-blue;
+		font-size: 14px;
+	}
+}
+
+.cart-block {
+	float: right;
+	display: flex;
+	height: 52px;
+	align-items: center;
+	.cart {
+	position: relative;
+	width: 28px;
+	height: 26px;
+	padding: 0;
+	background-color: transparent;
+	border: 0;
+		i {
+			font-size: 20px;
+			color: $dark-blue;
+			font-weight: 700;
+		}
+		.quantity-cart {
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			top: 0;
+			right: -5px;
+			font-size: 10px;
+			border-radius: 50%;
+			background-color: $brand-orange;
+		}
+	}
+}
+
+// Main-Nav
+
+.main-nav {
+		background-color: $blue;
+		position: relative;
+	}
+	.nav-container {
+		position: relative;
+	}
+	.logo {
+		position: absolute;
+		left: 0;
+		top: 0;
+		margin-top: -50px;
+	}
+	.nav-drop {
+		@extend %listreset;
+		text-align: right;
+		opacity: 0;
+		position: absolute;
+		z-index: 999;
+		top: 40px;
+		left: 100%;
+		width: 100%;
+		background-color: $blue;
+		padding: 10px 0;
+		transition: left 0.3s, visible 0.3s, opacity 0.3s;
+		@extend %clearfix;
+		@include media('>=tablet') {
+			opacity: 1;
+			position: static;
+			background-color: transparent;
+			padding: 0;
+		}
+		li {
+		display: inline-block;
+		padding: 0;
+			&.active a {
+				background-color: $dark-blue;
+			}
+			&.hover > a {
+				background-color: $dark-blue;
+				color: $white;
+			}
+			@include media('>=tablet') {
+				position: relative;
+			}
+		}
+		a {
+			transition: background-color 0.3s, color 0.3s;
+			color: $white;
+			text-decoration: none;
+			padding: 5px 10px;
+			display: block;
+			font-family: map-deep-get($base, font-Days);
+			&:hover {
+				color: $white;
+				background-color: $dark-blue;
+			}
+			@include media('>=tablet') {
+				padding: 15px 20px;
+				font-size: 12px;
+			}
+			@include media('>=desktop') {
+				font-size: 16px;
+				padding: 15.5px 30px;
+			}
+		}
+		.nav-active & {
+			visibility: visible;
+			opacity: 1;
+			left: 0;
+		}
+		.drop-down {
+		position: relative;
+			&-content {
+				@extend %listreset;
+				padding: 15px 15px;
+				background-color: $dark-blue;
+				opacity: 0;
+	        	visibility: hidden;
+				@include media('>=tablet') {
+					background-color: $blue;
+					opacity: 0.8;
+					position: absolute;
+					top: 100%;
+					width: 350px;
+					padding: 13px 0;
+					text-align: left;
+					z-index: 99;
+				}
+				li {
+					padding: 0 50px;
+				}
+				a {
+					@include media('>=tablet') {
+						color: $white;
+						padding: 13px 18px;
+						font-size: 12px;
+						font-weight: 500;
+						&:hover {
+							color: $brand-orange;
+							background-color: transparent;
+						}
+					}
+				}
+			}
+			&:hover {
+				.drop-down-content {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+	.nav-opener {
+		float: right;
+		width: 30px;
+		height: 30px;
+		background: $dark-blue;
+		position: relative;
+		border-radius: 0px;
+		display: block;
+		z-index: 11;
+		@include media('>=tablet') {
+			display: none;
+		}
+		&:hover {
+			opacity: .9;
+		}
+		.nav-active & {
+			span {
+				opacity: 0;
+			}
+			&:before,
+			&:after {
+				transform: rotate(45deg);
+				top: 50%;
+				left: 15%;
+				right: 15%;
+			}
+			&:after {
+				transform: rotate(-45deg);
+			}
+		}
+		span,
+		&:before,
+		&:after {
+			background: $blue;
+			border-radius: 0px;
+			position: absolute;
+			top: 50%;
+			left: 25%;
+			right: 25%;
+			height: 2px;
+			margin-top: -1px;
+			/* height/2 */
+			transition: all .3s linear;
+		}
+		&:before,
+		&:after {
+			content: '';
+			top: 30%;
+		}
+		&:after {
+			top: 70%;
+		}
+	}
+	.search-opener {
+		display: block;
+		border: 0;
+		padding: 13px;
+		background-color: $dark-blue;
+		transition: opacity 0.3s;
+		&:hover {
+			opacity: .5;
+		}
+		i {
+			font-size: 24px;
+			line-height: 1;
+			font-weight: 700;
+			vertical-align: text-top;
+		}
+	}
+
