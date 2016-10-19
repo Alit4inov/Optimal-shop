@@ -37,9 +37,9 @@ $(document).ready(function initMobileNav() {
 
     $(jQuery('body')).mobileNav({
         hideOnClickOutside: true,
-        menuActiveClass: 'footer-nav-active',
-        menuOpener: '#footer .nav-opener',
-        menuDrop: '#footer .nav-drop'
+        menuActiveClass: 'nav-active',
+        menuOpener: '.nav-opener',
+        menuDrop: '.nav-drop'
     });
 });
 
