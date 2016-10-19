@@ -1,0 +1,97 @@
+#footer {
+    padding: 84px 0 30px;
+    background-color: $blue;
+    color: $white;
+    font-size: 14px;
+    @include media('<desktop') {
+        font-size: 12px;
+    }
+    @include media('<phone') {
+        font-size: 10px;
+    }
+    .column-holder {
+        display: flex;
+        @include media('<tablet') {
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+        }
+    }
+    .footer-column {
+        width: 25%;
+        padding-right: 1%;
+        margin-bottom: 30px;
+        @include media('<tablet') {
+            width: 50%;
+            padding: 0 5%;
+        }
+        @include media('<phone') {
+            padding: 0 2%;
+        }
+    }
+    .question-form{
+    	margin-top: -11px;
+    }
+    .nav-list {
+        @extend %listreset;
+        li {
+            padding-bottom: 26px;
+            @include media('<desktop') {
+                padding-bottom: 20px;
+            }
+            @include media('<tablet') {
+                padding-bottom: 10px;
+            }
+            a {
+                transition: color 0.3s;
+            }
+        }
+    }
+    .copy {
+        margin-top: 40px;
+        text-align: center;
+    }
+    .contact-list {
+        margin-bottom: 72px;
+        @include media('<desktop') {
+            margin-bottom: 40px;
+        }
+        @include media('<tablet') {
+            margin-bottom: 20px;
+        }
+        li {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-bottom: 17px;
+        }
+        address {
+            display: inline-block;
+            vertical-align: middle;
+            width: 80%;
+            @include media('<desktop') {
+                width: 90%;
+                padding-left: 5px;
+            }
+        }
+        .link-wrapper {
+            display: inline-block;
+            vertical-align: middle;
+            width: 80%;
+            @include media('<desktop') {
+                width: 90%;
+                padding-left: 5px;
+            }
+        }
+        i {
+            font-size: 23px;
+            color: $white;
+            display: inline-block;
+            vertical-align: middle;
+            width: 20%;
+            @include media('<desktop') {
+                font-size: 17px;
+                width: 20%;
+            }
+        }
+    }
+}

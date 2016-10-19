@@ -123,7 +123,7 @@ header {
 		display: inline-block;
 		padding-right: 33px;
 		@include media('<widescreen') {
-		padding-right: 23px;
+		padding-right: 20px;
 		}
 	}
 	.top-nav-link {
@@ -133,7 +133,7 @@ header {
 		font-weight: 700;
 	}
 	@include media('<widescreen') {
-		margin-left: 40px;
+		margin-left: 35px;
 	}	
 	@include media('<tablet') {
 		display: none;
@@ -272,7 +272,7 @@ header {
 			transition: background-color 0.3s, color 0.3s;
 			color: $white;
 			text-decoration: none;
-			padding: 15px 20px;
+			padding: 13px 20px;
 			display: block;
 			font-family: map-deep-get($base, font-Days);
 			&:hover {
