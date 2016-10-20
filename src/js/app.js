@@ -1,10 +1,11 @@
 jQuery(function() {
     initTabs();
+    initOpenClose();
 });
 
 function initOpenClose() {
-	jQuery('.search-block').openClose({
-		activeClass: 'active',
+	jQuery('#search-block').openClose({
+		activeClass: 'active-seacrh',
 		opener: '.search-opener',
 		slider: '.search-slide',
 		animSpeed: 300,
@@ -12,6 +13,7 @@ function initOpenClose() {
 		hideOnClickOutside: true
 	});
 } 
+
 
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
@@ -237,6 +239,8 @@ function initTabs() {
  * jQuery Open/Close plugin
  */
 
+
+
 (function($) {
     function OpenClose(options) {
         this.options = $.extend({
@@ -251,6 +255,7 @@ function initTabs() {
         }, options);
         this.init();
     }
+
     OpenClose.prototype = {
         init: function() {
             if (this.options.holder) {

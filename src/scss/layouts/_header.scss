@@ -2,10 +2,10 @@ header {
 }
 
 .top-header {
+	@extend %clearfix;
 	position: relative;
 	padding: 20px 0 20px 153px;
 	box-sizing: border-box;
-	@extend %clearfix;
 		@include media('<widescreen') {
 		padding-left:  110px;
 	}
@@ -22,30 +22,30 @@ header {
 }
 .tel-block {
 	@include media('<desktop') {
-	width: 60%;
-	display: flex;
-	justify-content: flex-start;
-	height: 25px;
+		width: 60%;
+		display: flex;
+		justify-content: flex-start;
+		height: 25px;
 	}
 	@include media('<tablet') {
-	width: 100%;
-	display: flex;
-	justify-content: flex-start;
-	height: 30px
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		height: 30px
 	}
 }
 .mail-block {
 	@include media('<desktop') {
-	width: 40%;
-	display: flex;
-	justify-content: flex-start;
-	height: 25px;
+		width: 40%;
+		display: flex;
+		justify-content: flex-start;
+		height: 25px;
 	}
 	@include media('<tablet') {
-	width: 50%;
-	display: flex;
-	justify-content: center;
-	height: 30px;
+		width: 50%;
+		display: flex;
+		justify-content: center;
+		height: 30px;
 	}
 }
 .icon-box {
@@ -113,17 +113,23 @@ header {
 }
 
 .top-nav {
+	@extend %listreset;
 	float: left;
 	margin-left: 80px;
 	display: flex;
 	align-items: center;
 	height: 52px;
-	@extend %listreset;
+	@include media('<widescreen') {
+		margin-left: 35px;
+	}	
+	@include media('<tablet') {
+		display: none;
+	}
 	li {
 		display: inline-block;
 		padding-right: 33px;
 		@include media('<widescreen') {
-		padding-right: 20px;
+			padding-right: 20px;
 		}
 	}
 	.top-nav-link {
@@ -132,12 +138,6 @@ header {
 		color: $dark-blue;
 		font-weight: 700;
 	}
-	@include media('<widescreen') {
-		margin-left: 35px;
-	}	
-	@include media('<tablet') {
-		display: none;
-	}
 }
 
 .login-block {
@@ -145,6 +145,10 @@ header {
 	display: flex;
 	height: 52px;
 	align-items: center;
+	@include media('<tablet') {
+		height: 30px;
+		justify-content: center;
+	}
 	.login-link {
 		color: $dark-blue;
 		font-size: 14px;
@@ -153,10 +157,6 @@ header {
 		color: $dark-blue;
 		font-size: 14px;
 	}
-	@include media('<tablet') {
-	height: 30px;
-	justify-content: center;
-	}
 }
 
 .cart-block {
@@ -164,6 +164,9 @@ header {
 	display: flex;
 	height: 52px;
 	align-items: center;
+	@include media('<tablet') {
+		height: 30px;
+	}
 	.cart {
 	position: relative;
 	width: 28px;
@@ -182,13 +185,11 @@ header {
 			height: 14px;
 			top: 0;
 			right: -5px;
-			font-size: 10px;
+			font-size: 8px;
+			line-height: 14px;
 			border-radius: 50%;
 			background-color: $brand-orange;
 		}
-	}
-	@include media('<tablet') {
-		height: 30px;
 	}
 }
 
@@ -228,12 +229,12 @@ header {
 		}
 	.nav-drop {
 		@extend %listreset;
+		@extend %clearfix;
 		opacity: 1;
 		position: static;
 		background-color: transparent;
 		padding: 0;
 		text-align: right;
-		@extend %clearfix;
 		@include media('<=tablet') {
 			text-align: right;
 			opacity: 0;
@@ -248,6 +249,11 @@ header {
 		li {
 		display: inline-block;
 		padding: 0;
+		position: relative;
+			@include media('<=tablet') {
+				width: 100%;
+				text-align: center;
+			}
 			&.active a {
 				background-color: $brand-orange;
 			}
@@ -255,37 +261,31 @@ header {
 				background-color: $dark-blue;
 				color: $white;
 			}
-			@include media('>=tablet') {
-				position: relative;
-			}
 			&:last-child .drop-down {
 				left: auto;
 				right: 0;
 				text-align: right;
-			}
-			@include media('<=tablet') {
-			width: 100%;
-			text-align: center;
 			}
 		}
 		a {
 			transition: background-color 0.3s, color 0.3s;
 			color: $white;
 			text-decoration: none;
-			padding: 13px 20px;
+			font-size: 16px;
+			line-height: 2;
+			padding: 9px 20px;
 			display: block;
 			font-family: map-deep-get($base, font-Days);
+			@include media('<widescreen') {
+				padding: 9px 15px;
+			}
+			@include media('<=desktop') {
+				padding: 12px 8px;
+				font-size: 13px;
+			}
 			&:hover {
 				color: $white;
 				background-color: $dark-blue;
-			}
-			@include media('<widescreen') {
-				padding: 15px 15px;
-				font-size: 15px;
-			}
-			@include media('<=desktop') {
-				padding: 19px 8px;
-				font-size: 13px;
 			}
 		}
 		.nav-active & {
@@ -302,16 +302,14 @@ header {
 				background-color: $dark-blue;
 				opacity: 0;
 	        	visibility: hidden;
-				@include media('<=tablet') {
-
-				}
 				li {
 					width: 100%;
-					margin-bottom: 20px;
+					margin-bottom: 10px;
 					.triangle {
 						display: inline-block;
 						float: right;
-						margin-top: 6px;
+						margin-top: 12px;
+						margin-right: 30px;
 						@include triangle(10px, $white, right);
 					}
 					&:hover {
@@ -320,7 +318,7 @@ header {
 							.triangle {
 								@include triangle(12px, $brand-orange, right);
 							}
-							a {
+							> a {
 								color: $brand-orange;
 								background-color: transparent;
 							}
@@ -330,23 +328,23 @@ header {
 					display: inline-block;
 					float: left;
 					font-family: map-deep-get($base, base-font-family);
-					@include media('>=tablet') {
-						color: $white;
-						padding: 0px 5px;
-						font-size: 16px;
-						font-weight: 600;
+					color: $white;
+					padding: 0px 5px;
+					font-size: 16px;
+					font-weight: 600;
+					@include media('<=desktop') {
+						font-size: 13px;
 					}
 				}
 			}
 			&:hover {
 				.drop-down-content {
 					visibility: visible;
-					background-color: $blue;
-					opacity: 0.9;
-					position: absolute;
+					opacity: 1;
+					background: rgba($blue, .9);
 					top: 100%;
 					width: 350px;
-					padding: 30px 30px 30px 37px;
+					padding: 30px 0px 30px 37px;
 					text-align: left;
 					z-index: 99;
 				}
@@ -356,58 +354,43 @@ header {
 		position: relative;
 			&-content {
 				@extend %listreset;
+				position: absolute;
 				padding: 15px 15px;
 				background-color: $dark-blue;
 				opacity: 0;
 	        	visibility: hidden;
-				@include media('>=tablet') {
-					background-color: $blue;
-					opacity: 0.8;
-					position: absolute;
-					top: -20px;
-					left: 100%;
-					width: 350px;
-					padding: 30px 30px 30px 37px;
-					text-align: left;
-					z-index: 99;
-				}
 				li {
 					width: 100%;
 					margin-bottom: 20px;
-					.triangle {
-						display: inline-block;
-						float: right;
-						margin-top: 6px;
-						@include triangle(10px, $white, right);
-					}
 					&:hover {
+						a {
 							color: $brand-orange;
 							background-color: transparent;
-							.triangle {
-								@include triangle(12px, $brand-orange, right);
-							}
-							a {
-								color: $brand-orange;
-								background-color: transparent;
-							}
 						}
+					}
 				}
 				a {
 					display: inline-block;
 					float: left;
 					font-family: map-deep-get($base, base-font-family);
-					@include media('>=tablet') {
-						color: $white;
-						padding: 0px 5px;
-						font-size: 16px;
-						font-weight: 600;
-					}
 				}
 			}
 			&:hover {
 				.drop-right-content {
-					opacity: 1;
 					visibility: visible;
+					background-color: $blue;
+					opacity: 0.9;
+					position: absolute;
+					top: -20px;
+					left: 313px;
+					width: 350px;
+					padding: 30px 30px 30px 37px;
+					text-align: left;
+					z-index: 99;
+					@include media('<=tablet') {
+						position: relative;
+						width: 100%;
+					}
 				}
 			}
 		}
@@ -445,7 +428,7 @@ header {
 		span,
 		&:before,
 		&:after {
-			background: $blue;
+			background: $white;
 			border-radius: 0px;
 			position: absolute;
 			top: 50%;
@@ -465,24 +448,55 @@ header {
 			top: 70%;
 		}
 	}
+	#search-block {
+		position: relative;
+		.search-slide {
+			position: absolute;
+			padding: 10px;
+			width: 300px;
+			top: 100%;
+			right: 0;
+			left: auto;
+			background-color: $blue;
+			z-index: 999;
+			box-sizing: border-box;
+			.search-field {
+				display: inline-block;
+				width: 75%;
+				float: left;
+			}
+			.submit-seacrh {
+				display: inline-block;
+				padding: 5px;
+				border: 0;
+				line-height: 32px;
+				background-color: $dark-blue;
+				color: $white;
+			}
+		}
+	}
 	.search-opener {
 		display: block;
 		border: 0;
-		padding: 13px;
+		height: 50px;
+		padding: 0 14px;
 		background-color: $dark-blue;
 		transition: opacity 0.3s;
+		outline: none;
+		@include media('<=tablet') {
+			margin: 0 auto;
+		}
 		&:hover {
 			opacity: .5;
 		}
 		i {
-			font-size: 24px;
-			line-height: 1;
+			font-size: 22px;
+			line-height: 50px;
+			vertical-align: middle;
 			font-weight: 700;
-			vertical-align: text-top;
+			text-indent: 0;
 		}
-		@include media('<=tablet') {
-			margin: 0 auto;
-		}
+
 	}
 
 	.triangle {
