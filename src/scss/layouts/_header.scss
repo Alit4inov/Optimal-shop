@@ -101,7 +101,7 @@ header {
 		line-height: 1.2;
 		color: $dark-blue;
 		font-weight: 700;
-		@include media('<=tablet') {
+		@include media('<tablet') {
 			font-size: 10px;
 		}
 	}
@@ -110,7 +110,7 @@ header {
 	font-size: 14px;
 	color: $dark-blue;
 	font-weight: 700;
-	@include media('<=tablet') {
+	@include media('<tablet') {
 		font-size: 10px;
 	}
 }
@@ -126,8 +126,9 @@ header {
 		order:6;
 		width: 100%;
 		justify-content: flex-end;
+		margin-right: 0;
 	}	
-	@include media('<=tablet') {
+	@include media('<tablet') {
 		display: none;
 	}
 	li {
@@ -157,10 +158,8 @@ header {
 	}
 	.login-link {
 		color: $dark-blue;
-		font-size: 14px;
-		@include media('<=tablet') {
-			font-size: 10px;
-		}
+		font-size: 10px;
+		font-weight: 700;
 	}
 	span {
 		color: $dark-blue;
@@ -203,12 +202,16 @@ header {
 .main-nav {
 		background-color: $blue;
 		position: relative;
-			@include media('<=tablet') {
-				height: 50px;
-				padding: 10px 20px;
+		@include media('<=tablet') {
+			height: 50px;
+			padding: 10px 20px;
+		}
+		@include media('<=phone') {
+			padding: 10px 0;
 		}
 	}
 	.nav-container {
+		@extend %clearfix;
 		position: relative;
 	}
 	.logo {
@@ -217,21 +220,21 @@ header {
 		top: 0;
 		margin-top: -50px;
 		z-index: 99999;
+		@include media('<widescreen') {
+			width: 120px;
+			height: 120px;
+			margin-top: -35px;
+			left: 6px;
+		}
+		@include media('<=tablet') {
+			width: 90px;
+			height: 90px;
+			margin-top: -20px;
+		}
 		img {
 			height: auto;
 		}
-			@include media('<widescreen') {
-				width: 125px;
-				height: 125px;
-				margin-top: -37.5px;
-				left: 8px;
-			}
-			@include media('<tablet') {
-				width: 90px;
-				height: 90px;
-				margin-top: -20px;
-			}
-		}
+	}
 	.nav-drop {
 		@extend %listreset;
 		@extend %clearfix;
@@ -240,6 +243,11 @@ header {
 		background-color: transparent;
 		padding: 0;
 		text-align: right;
+		float: left;
+		width: 95%;
+		@include media('<=desktop') {
+			width: 93%;
+		}
 		@include media('<=tablet') {
 			opacity: 0;
 			position: absolute;
@@ -299,7 +307,6 @@ header {
 		}
 		.drop-down {
 		position: relative;
-
 			&-content {
 				@extend %listreset;
 				position: absolute;
@@ -310,12 +317,18 @@ header {
 				li {
 					width: 100%;
 					margin-bottom: 10px;
+					@include media('<=desktop') {
+						margin-bottom: 0;
+					}
 					.triangle {
 						display: inline-block;
 						float: right;
 						margin-top: 12px;
 						margin-right: 30px;
 						@include triangle(10px, $white, right);
+						@include media('<=desktop') {
+							margin-top: 9px;
+						}						
 						@include media('<=tablet') {
 							display: none;
 						}
@@ -335,6 +348,7 @@ header {
 				a {
 					display: inline-block;
 					float: left;
+					margin-left: 37px;
 					font-family: map-deep-get($base, base-font-family);
 					color: $white;
 					padding: 0px 5px;
@@ -342,6 +356,11 @@ header {
 					font-weight: 600;
 					@include media('<=desktop') {
 						font-size: 13px;
+						margin-left: 27px;
+					}
+					@include media('<=tablet') {
+						font-size: 13px;
+						margin-left: 17px;
 					}
 				}
 			}
@@ -352,15 +371,22 @@ header {
 					background: rgba($blue, .9);
 					top: 100%;
 					width: 350px;
-					padding: 30px 0px 30px 37px;
+					padding: 30px 0px;
 					text-align: left;
 					z-index: 999;
+					@include media('<=desktop') {
+						padding: 15px 0px;
+						width: 300px;
+					}
 					@include media('<=tablet') {
 						position: relative;
 						width: 100%;
 						padding: 0;
 						padding-left: 15px;
 					}
+				}
+				> a {
+					background-color: $dark-blue;
 				}
 			}
 		}
@@ -378,7 +404,10 @@ header {
 	        	visibility: hidden;
 				li {
 					width: 100%;
-					margin-bottom: 20px;
+					margin-bottom: 10px;
+					@include media('<=desktop') {
+						margin-bottom: 0;
+					}
 					&:hover {
 						a {
 							color: $brand-orange;
@@ -399,11 +428,14 @@ header {
 					opacity: 0.9;
 					position: absolute;
 					top: -20px;
-					left: 313px;
+					left: 100%;
 					width: 350px;
-					padding: 30px 30px 30px 37px;
 					text-align: left;
 					z-index: 99;
+					@include media('<=desktop') {
+						padding: 15px 0px;
+						width: 300px;
+					}
 				}
 			}
 		}
@@ -411,7 +443,6 @@ header {
 	.nav-opener {
 		display: none;
 		@include media('<=tablet') {
-			display: none;
 			float: right;
 			width: 30px;
 			height: 30px;
@@ -464,9 +495,12 @@ header {
 	}
 	#search-block {
 		position: relative;
+		float: right;
+		@include media('<=tablet') {
+			}
 		.search-slide {
 			position: absolute;
-			padding: 10px;
+			padding: 5px;
 			width: 300px;
 			top: 100%;
 			right: 0;
@@ -483,7 +517,7 @@ header {
 				display: inline-block;
 				padding: 5px;
 				border: 0;
-				line-height: 32px;
+				line-height: 1;
 				background-color: $dark-blue;
 				color: $white;
 			}
@@ -498,7 +532,7 @@ header {
 		transition: opacity 0.3s;
 		outline: none;
 		@include media('<=tablet') {
-			margin: 0 auto;
+			display: none;
 		}
 		&:hover {
 			opacity: .5;
@@ -512,8 +546,3 @@ header {
 		}
 
 	}
-
-	.triangle {
-		display: block;
-			@include triangle(12px, gray, down);
-		}
