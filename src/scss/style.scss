@@ -23,11 +23,12 @@
 /* Layouts */
 @import 'layouts/common';
 @import 'layouts/header';
+@import 'layouts/main';
 @import 'layouts/footer';
 
 
 .page-list {
-	@extend %listreset;
+	@extend %listreset; 
 	display: block;
 	margin: 0 auto;
 	padding: 50px;

@@ -1,18 +1,8 @@
-jQuery(function() {
-    initTabs();
-    initOpenClose();
-});
 
-function initOpenClose() {
-	jQuery('#search-block').openClose({
-		activeClass: 'active-seacrh',
-		opener: '.search-opener',
-		slider: '.search-slide',
-		animSpeed: 300,
-		effect: 'slide',
-		hideOnClickOutside: true
-	});
-} 
+jQuery(function() {
+    initOpenClose();
+    initTabs();
+});
 
 
 $(document).ready(function () {
@@ -22,7 +12,48 @@ $(document).ready(function () {
         autoplay:true,
         dotsEach:"2"
     });
+//     function initTabs() {
+//     jQuery('ul.tab-nav').tabset({
+//         tabLinks: 'a.tab-selector',
+//         attrib: 'data-tab',
+//         defaultTab: false
+//     });
+// }
 });
+
+function initTabs() {
+    jQuery('ul.tab-nav').tabset({
+        tabLinks: 'a.tab-selector',
+        attrib: 'data-tab',
+        defaultTab: false
+    });
+}
+function initOpenClose() {
+    jQuery('#search-block').openClose({
+        activeClass: 'active-seacrh',
+        opener: '.search-opener',
+        slider: '.search-slide',
+        animSpeed: 300,
+        effect: 'slide',
+        hideOnClickOutside: true
+    });
+    jQuery('.category-select-block').openClose({
+        activeClass: 'active',
+        opener: '.opener-category',
+        slider: '.category-list',
+        animSpeed: 300,
+        effect: 'slide',
+        hideOnClickOutside: true
+    });
+    jQuery('.category-item').openClose({
+        activeClass: 'active',
+        opener: '.category-open',
+        slider: '.hidden-list',
+        animSpeed: 300,
+        effect: 'slide',
+        hideOnClickOutside: true
+    });
+} 
 
 $(function() {
     $('.item').matchHeight({
@@ -46,13 +77,6 @@ $(document).ready(function initMobileNav() {
 });
 
 
-function initTabs() {
-    jQuery('ul.preview-list').tabset({
-        tabLinks: 'a',
-        attrib: 'data-tab',
-        defaultTab: false
-    });
-}
 
 
 /*
