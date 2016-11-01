@@ -27,6 +27,11 @@ function initTabs() {
         attrib: 'data-tab',
         defaultTab: false
     });
+       jQuery('ul.info-tab-list').tabset({
+        tabLinks: 'a.tab-selector',
+        attrib: 'data-tab',
+        defaultTab: false
+    });
 }
 function initOpenClose() {
     jQuery('#search-block').openClose({
@@ -57,7 +62,6 @@ function initOpenClose() {
 
 $(function() {
     $('.item').matchHeight({
-
         byRow: true,
         property: 'height',
         target: null,
@@ -67,7 +71,6 @@ $(function() {
 });
 
 $(document).ready(function initMobileNav() {
-
     $(jQuery('body')).mobileNav({
         hideOnClickOutside: true,
         menuActiveClass: 'nav-active',
@@ -76,8 +79,41 @@ $(document).ready(function initMobileNav() {
     });
 });
 
+    $(".item-images .owl-carousel").owlCarousel({
+        items: 1,
+        dots:true,
+        animateOut: 'fadeOut'
+    });
+
+jQuery(document).ready(function() {
+
+    var dotcount = 1;
+    jQuery('.item-images .owl-dot').each(function() {
+        jQuery(this).addClass('dotnumber' + dotcount);
+        jQuery(this).attr('data-info', dotcount);
+        dotcount = dotcount + 1;
+    });
+    var slidecount = 1;
+
+    jQuery('.item-images .owl-item').not('.cloned').each(function() {
+        jQuery(this).addClass('slidenumber' + slidecount);
+        slidecount = slidecount + 1;
+    });
+
+    jQuery('.item-images .owl-dot').each(function() {
+
+        var grab = jQuery(this).data('info');
+
+        var slidegrab = jQuery('.slidenumber' + grab + ' img').attr('src');
+        console.log(slidegrab);
+
+        jQuery(this).css("background-image", "url(" + slidegrab + ")");
+
+    });
 
 
+
+});
 
 /*
  * jQuery Tabs plugin

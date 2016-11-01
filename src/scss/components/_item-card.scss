@@ -1,0 +1,198 @@
+.item-card {
+    @extend %clearfix;
+    .top-info {
+        @extend %clearfix;
+        margin-bottom: 30px;
+    }
+    .item-images {
+        width: 50%;
+        float: left;
+        @include media('<phone') {
+            width: 100%;
+        }
+    }
+    .item-descr {
+        width: 50%;
+        float: left;
+        @include media('<phone') {
+            width: 100%;
+        }
+    }
+    .owl-carousel {
+        padding-right: 130px;
+        @include media('<=tablet') {
+            padding-right: 15px;
+        }
+        .item-photo {
+            border: 1px solid $gray1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 320px;
+            overflow: hidden;
+            a {
+                display: flex;
+                height: 100%;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+            @include media('<tablet') {
+                margin-bottom: 10px;
+            }
+            img {
+                vertical-align: top;
+                width: 100%;
+                height: auto;
+                max-width: none;
+            }
+        }
+        .owl-dots {
+            position: absolute;
+            right: 21px;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            bottom: 100%;
+            left: auto;
+            overflow: hidden;
+            display: block;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            z-index: 999;
+            @include media('<tablet') {
+                overflow: hidden;
+                position: static;
+                width: auto;
+                flex-direction: row;
+            }
+            @include media('<phone') {
+                margin-bottom: 20px;
+            }
+        }
+        .owl-dot {
+            flex-shrink: 0;
+            width: 100px;
+            height: 100px;
+            background-size: 100% 100%;
+            display: block;
+            border: 1px solid $gray1;
+            cursor: pointer;
+            &.active {
+                border-color: $dark-blue;
+            }
+            @include media('<tablet') {
+                width: 69px;
+                background-size: contain;
+                flex-shrink: 1;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+            }
+            @include media('<phone') {
+                width: 89px;
+            }
+        }
+    }
+}
+
+.item-descr {
+    color: $dark-blue;
+    font-size: 14px;
+    font-family: map-get($base, 'font-Roboto');
+    h1,
+    .h1 {
+        color: $dark-blue;
+        text-transform: none;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .price {
+        font-size: 24px;
+        color: $brand-orange;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    .btns-row {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        .btn-primary {
+            font-size: 14px;
+            max-width: 180px;
+            padding: 6px 15px;
+        }
+        .default-link {
+            font-size: 16px;
+            color: $brand-orange;
+            font-weight: 700;
+            text-decoration: underline;
+            text-align: right;
+            font-style: italic;
+            display: inline-block;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.option-list {
+    @extend %listreset;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-style: italic;
+    color: #555;
+    li {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 8px;
+        font-weight: 700;
+    }
+    .value {
+        font-style: normal;
+        font-weight: bold;
+    }
+}
+
+.bottom-info {
+    .info-tab-list {
+        @extend %listreset;
+        font-size: 16px;
+       line-height: 1.8;
+      
+        li {
+            display: inline-block;
+            font-size: 16px;
+        }
+        a {
+            background-color: $blue;
+            padding: 5px 18px;
+            margin-right: -2px;
+            font-size: 16px;
+    	 @include media('<tablet') {
+    	 	font-size: 12px;
+    	 	padding: 5px;
+    	 }
+
+            &.active {
+                background-color: #6f99b1;
+            }
+        }
+    }
+    .info-content{
+    	padding: 26px 30px ;color: $dark-blue;font-size: 14px;
+    	min-height: 229px;
+    	 border: 1px solid $gray1;
+    	 @include media('<desktop') {
+    		padding: 10px;
+    	 
+    	 }
+    			
+    }
+}
