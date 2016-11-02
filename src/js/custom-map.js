@@ -11,7 +11,7 @@ function initCustomMap() {
 			holder: this,
 			defaultOptions: {
 				maxZoom: 18,
-				zoom: 17,
+				zoom: 18,
 				draggable: !isTouchDevice,
 				scrollwheel: false,
 				disableDefaultUI: true

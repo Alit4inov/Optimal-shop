@@ -1,0 +1,28 @@
+	.pagination {
+	@extend %listreset;
+	text-align: center;
+	
+	li {
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+		transition: 0.3s;
+		&:hover {
+				opacity: .5;
+			}
+		a {
+			display: block;
+			height: 100%;
+			width: 100%;
+			color: $brand-orange;
+		}
+		.dots {
+			margin: 0;
+			padding: 0;
+			color: $brand-orange;
+			}
+		}
+		.active {
+			opacity: .5;
+		}
+	}

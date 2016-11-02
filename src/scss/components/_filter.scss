@@ -1,0 +1,23 @@
+.goods-block {
+	h1 {
+		font-size: 24px;
+		color: $brand-orange;
+		text-align: center;
+		font-family: map-deep-get($base, font-Days);
+		letter-spacing: 3px;
+	}
+	strong {
+		color: $dark-blue;
+		font-size: 16px;
+		font-weight: 600;
+	}
+}
+
+
+
+.filter {
+	color: $dark-blue;
+	display: flex;
+	justify-content: space-between;
+}
+

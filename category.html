@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimal Gas</title>
+    <link rel="icon" href="build/images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700&quot;" rel="stylesheet">
+    <link media="all" rel="stylesheet" href="build/css/vendor.css">
+    <link media="all" rel="stylesheet" href="build/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+      <div class="container">
+        <div class="top-header">
+            <div class="contact-block tel-block">
+              <div class="icon-box icon-box-phone">
+                <i class="icon-phone"></i>
+              </div>
+              <div class="tel-box">
+                <a href="tel:0951293303" class="tel-link">095-129-33-03</a>
+                <a href="tel:0687373343" class="tel-link">068-73-73-343</a>
+                <a href="tel:0636642486" class="tel-link">063-664-24-86</a>
+              </div> 
+            </div>
+            <div class="contact-block mail-block">
+              <div class="icon-box icon-box-mail">
+                <i class="icon-mail2"></i>
+              </div>
+              <a href="mailto:&#111;&#112;&#116;&#105;&#109;&#097;&#108;&#103;&#097;&#115;&#064;&#109;&#097;&#105;&#108;&#046;&#114;&#117;" class="mail-link">&#111;&#112;&#116;&#105;&#109;&#097;&#108;&#103;&#097;&#115;&#064;&#109;&#097;&#105;&#108;&#046;&#114;&#117;</a>
+            </div>
+            <ul class="top-nav">
+              <li><a href="#" class="top-nav-link">О нас</a></li>
+              <li><a href="#" class="top-nav-link">Оплата и доставка</a></li>
+              <li><a href="#" class="top-nav-link">Гарантия</a></li>
+              <li><a href="#" class="top-nav-link">Новости</a></li>
+            </ul>
+            <div class="login-block">
+              <div class="icon-box icon-box-login">
+                <i class="icon-user"></i>
+              </div>
+              <a href="#" class="login-link" data-modal="#modal-login">Вход</a>
+              <span>&nbsp;/&nbsp;</span>
+                  <div class="modal login-window" data-modal-window id="modal-login">
+                    <a  class="close" data-modal-close>x</a>
+                    <h5>ВХОД В ИНТЕРНЕТ-МАГАЗИН</h5>
+                        <form action="#" class="reg-form">
+                            <div class="modal-row">
+                                <label for="login-name">Логин: *</label>
+                                <input type="text" id="login-name" placeholder="Мобильный телефон" required>
+                            </div>
+                            <div class="modal-row">
+                                <label for="login-psw">Пароль: *</label>
+                                <input type="password" id="login-psw" placeholder="" required>
+                            </div>
+                            <div class="modal-row">
+                                <button type="submit" class="btn btn-primary">Войти</button>
+                            <a href="#" class="reg-link">Зарегестрироваться</a>
+                            </div>
+                            <a href="#" class="forgot">Забыли пароль?</a>
+                        </form>
+                  </div>
+              <a href="#" class="login-link" data-modal="#modal-reg" >регистрация</a>
+              <div class="modal reg-window" data-modal-window id="modal-reg">
+                <a  class="close" data-modal-close>x</a>
+                <h5>РЕГИСТРАЦИЯ</h5>
+                    <form action="#" class="reg-form">
+                        <div class="modal-row">
+                            <label for="reg-name">Имя: *</label>
+                            <input type="text" id="reg-name" placeholder="Введите имя" required>
+                        </div>
+                        <div class="modal-row">
+                            <label for="mail">E-mail: *</label>
+                            <input type="email" id="mail" placeholder="Адрес электронный почты" required>
+                        </div>
+                        <div class="modal-row">
+                            <label for="tel-number">Номер телефона (логин): *</label>
+                            <input type="text" id="tel-number" placeholder="Мобильный телефон" required>
+                        </div>
+                        <div class="modal-row">
+                            <label for="psw">Придумайте пароль: *</label>
+                            <input type="password" id="psw" placeholder="6 или более символов" required>
+                        </div>
+                        <div class="modal-row">
+                            <label for="confirm-psw">Придумайте пароль: *</label>
+                            <input type="password" id="confirm-psw" placeholder="Введите пароль еще раз" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Зарегестрироваться</button>            
+                    </form>
+              </div>
+            </div>
+            <div class="cart-block">
+              <button class="cart" data-modal="#modal-cart">
+                <i class="icon-cart"></i>
+                <span class="quantity-cart">1</span>
+              </button>
+              <div class="modal cart-window" data-modal-window id="modal-cart">
+                <a  class="close" data-modal-close>x</a>
+                <h5>Корзина</h5>
+                    <div class="cart-row">
+                        <div class="order-info">
+                            <a href="#" class="img-holder"><img src="build/images/img1.jpg" alt="Баллон 
+                                315х753 55 л,
+                                Green Gas">
+                            </a>
+                            <div class="img-description">
+                                Баллон 
+                                315х753 55 л,
+                                Green Gas
+                                <span class="price">1400</span>
+                            </div>
+                        </div>
+                        <div class="order-price-info">
+                            <div class="quantity">
+                               <input type="number" min="1" max="9" step="1" value="2"> 
+                               <span>шт.</span>
+                            </div>
+                            <span class="sum">2800 грн.</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <span class="result"><span>Итого:&nbsp;&nbsp;</span>2800грн.</span>
+                    <div class="cart-row footer-row">
+                        <a href="#" class="cont-link">Продолжить покупки</a>
+                        <button class="btn btn-primary">Оформить заказ</button>
+                    </div>        
+               </div>
+            </div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <div class="container nav-container">
+          <div class="logo">
+            <a href="#"><img src="build/images/logo.png" height="150" width="150" alt="OPTIMAL газобалонное оборудование"></a>
+          </div>
+          <a href="#" class="nav-opener"><span></span></a>
+          <ul class="nav-drop">
+            <li class="drop-down">
+              <a href="#">МАГАЗИН</a>
+              <span class="triangle-down"></span>
+              <ul class="drop-down-content">
+                <li><a href="#">Оборудование 4-го поколения</a><span class="triangle"></span></li>
+                <li class="drop-right">
+                  <a href="#">Оборудование 2-го поколения</a>
+                  <span class="triangle"></span>
+                  <ul class="drop-right-content">
+                    <li><a href="#">Комплекты, электроника</a></li>
+                    <li><a href="#">Форсунки и штуцеры</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Баллоны, крепление баллонов</a><span class="triangle"></span></li>
+                <li><a href="#">Форсунки</a><span class="triangle"></span></li>
+                <li><a href="#">Фильтры</a><span class="triangle"></span></li>
+                <li><a href="#">Ремкоплекты</a><span class="triangle"></span></li>
+                <li><a href="#">Шланги и трубки</a><span class="triangle"></span></li>
+                <li><a href="#">Электроклапаны бензина, газа</a><span class="triangle"></span></li>
+              </ul>
+            </li>
+            <li><a href="#">АКЦИИ</a></li>
+            <li><a href="#">УСТАНОВКА ГБО</a></li>
+            <li><a href="#">КОНТАКТЫ</a></li>
+            <li><a href="#">ПОЛЕЗНО ЗНАТЬ</a></li>
+          </ul>
+          <div id="search-block">
+              <button class="search-opener"><i class="icon-search"></i></button>
+              <form class="search-slide" action="#">
+                <input class="search-field" type="search" name="#" required>
+                <button class="submit-seacrh" type="submit" value="поиск">
+                <i class="icon-search"></i>
+                </button>
+              </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="content">
+        <div class="container">
+            <aside class="category-select-block">
+                <h5 class="opener-category">Каталог товаров<i></i><span class="cat-icon"><img src="build/images/catalog.png" alt="catalog-icon"></span></h5>
+                <ul class="category-list">
+                    <li class="category-item">
+                        <div class="category-link">
+                            <a href="#">Оборудование 4-го поколения</a>
+                            <div class="category-open">
+                                <span class="triangle"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="category-item">
+                        <div class="category-link">
+                            <a href="#">Оборудование 2-го поколения</a>
+                            <div class="category-open">
+                                <span class="triangle"></span>
+                            </div>
+                        </div>
+                        <ul class="hidden-list">
+                            <li><a href="#">Комплекты, электроника</a></li>
+                            <li><a href="#">Форсунки и штуцеры</a></li>
+                        </ul>
+                    </li>
+                    <li class="category-item">
+                        <div class="category-link">
+                            <a href="#">Баллоны, крепление баллонов</a>
+                            <div class="category-open">
+                                <span class="triangle"></span>
+                            </div>
+                        </div>
+                      <ul class="hidden-list">
+                            <li><a href="#">Комплекты, электроника</a></li>
+                            <li><a href="#">Форсунки и штуцеры</a></li>
+                        </ul>
+                    </li>
+                    <li class="category-item">
+                        <div class="category-link">
+                            <a href="#">Форсунки</a>
+                            <div class="category-open">
+                                <span class="triangle"></span>
+                            </div>
+                        </div>
+                        <ul class="hidden-list">
+                            <li><a href="#">Комплекты, электроника</a></li>
+                            <li><a href="#">Форсунки и штуцеры</a></li>
+                        </ul>
+                    </li>
+                    <li class="category-item">
+                        <div class="category-link">
+                            <a href="#">Фильтры</a>
+                            <div class="category-open">
+                                <span class="triangle"></span>
+                            </div>
+                        </div>
+                        <ul class="hidden-list">
+                            <li><a href="#">Комплекты, электроника</a></li>
+                            <li><a href="#">Форсунки и штуцеры</a></li>
+                        </ul>
+                    </li>
+                    <li class="category-item">
+                        <div class="category-link">
+                            <a href="#">Ремкоплекты</a>
+                            <div class="category-open">
+                                <span class="triangle"></span>
+                            </div>
+                        </div>
+                        <ul class="hidden-list">
+                            <li><a href="#">Комплекты, электроника</a></li>
+                            <li><a href="#">Форсунки и штуцеры</a></li>
+                        </ul>
+                    </li>
+                    <li class="category-item">
+                        <div class="category-link">
+                            <a href="#">Шланги и трубки</a>
+                            <div class="category-open">
+                                <span class="triangle"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="category-item">
+                        <div class="category-link">
+                            <a href="#">Электроклапаны бензина, газа</a>
+                            <div class="category-open">
+                                <span class="triangle"></span>
+                            </div>
+                        </div>
+                    </li>                    
+                    <li class="category-item">
+                        <div class="category-link">
+                            <a href="#"></a>
+                            <div class="category-open">
+                                <span class="triangle"></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+            <div class="goods-block">
+            <h1>ФОРСУНКИ, ШТУЦЕРЫ</h1>
+            <strong>В этом разделе вы найдете самый широкий выбор того, что тут можно найти и из того, что найти нельзя. 
+            Мы предлагаем только качественную продукцию от ведущих производителей кондитерских изделий.</strong>
+            <div class="filter">
+                <span class="quantity">Найдено:<span class="result">1 234</span>товара</span>
+                <div class="filter-select">
+                    <form action="#">
+                        <label for="sort">Сортировка:</label>
+                        <select name="sort" id="sort">
+                            <option value="#">по популярности</option>
+                            <option value="#">по популярности</option>
+                            <option value="#">по популярности</option>
+                            <option value="#">по популярности</option>
+                        </select>
+                        <label for="ppg">На странице:</label>
+                        <select name="goods-per-page" id="gpp">
+                            <option value="24">24</option>
+                            <option value="12">12</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <span class="current-page"></span>
+            <ul class="pagination">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#" class="dots">...</a></li>
+                <li><a href="#">26</a></li>
+            </ul>
+                        <div class="tab-popular">
+                            <div class="goods-thumb">
+                                <a href="#">
+                                    <div class="img-holder">
+                                    <img src="build/images/img1.jpg" height="169" width="220" alt="">
+                                    </div>
+                                <span class="goods-description">Баллон 315х753 55 л, Green GasБаллон 315х753 55 л, Green Gas</span>
+                                </a>
+                                <div class="thumb-footer">
+                                    <span class="price">50.5$</span>
+                                    <a href="#" class="to-cart">
+                                        <i class="icon-cart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="goods-thumb">
+                                <a href="#">
+                                    <div class="img-holder">
+                                    <img src="build/images/img1.jpg" height="169" width="220" alt="">
+                                    </div>
+                                <span class="goods-description">Баллон 315х753 55 л, Green GasБаллон 315х753 55 л, Green Gas</span>
+                                </a>
+                                <div class="thumb-footer">
+                                    <span class="price">50.5$</span>
+                                    <a href="#" class="to-cart">
+                                        <i class="icon-cart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="goods-thumb">
+                                <a href="#">
+                                    <div class="img-holder">
+                                    <img src="build/images/img1.jpg" height="169" width="220" alt="">
+                                    </div>
+                                <span class="goods-description">Баллон 315х753 55 л, Green GasБаллон 315х753 55 л, Green Gas</span>
+                                </a>
+                                <div class="thumb-footer">
+                                    <span class="price">50.5$</span>
+                                    <a href="#" class="to-cart">
+                                        <i class="icon-cart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="goods-thumb">
+                                <a href="#">
+                                    <div class="img-holder">
+                                    <img src="build/images/img1.jpg" height="169" width="220" alt="">
+                                    </div>
+                                <span class="goods-description">Баллон 315х753 55 л, Green GasБаллон 315х753 55 л, Green Gas</span>
+                                </a>
+                                <div class="thumb-footer">
+                                    <span class="price">50.5$</span>
+                                    <a href="#" class="to-cart">
+                                        <i class="icon-cart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="goods-thumb">
+                                <a href="#">
+                                    <div class="img-holder">
+                                    <img src="build/images/img1.jpg" height="169" width="220" alt="">
+                                    </div>
+                                <span class="goods-description">Баллон 315х753 55 л, Green GasБаллон 315х753 55 л, Green Gas</span>
+                                </a>
+                                <div class="thumb-footer">
+                                    <span class="price">50.5$</span>
+                                    <a href="#" class="to-cart">
+                                        <i class="icon-cart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="goods-thumb">
+                                <a href="#">
+                                    <div class="img-holder">
+                                    <img src="build/images/img1.jpg" height="169" width="220" alt="">
+                                    </div>
+                                <span class="goods-description">Баллон 315х753 55 л, Green GasБаллон 315х753 55 л, Green Gas</span>
+                                </a>
+                                <div class="thumb-footer">
+                                    <span class="price">50.5$</span>
+                                    <a href="#" class="to-cart">
+                                        <i class="icon-cart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+            </div>
+        </div> 
+      </div>
+    </main>
+    <footer id="footer">
+        <div class="container ">
+            <div class="column-holder">
+                <section class="footer-column">
+                    <h5>Наша продукция</h5>
+                    <nav>
+                        <ul class="nav-list">
+                            <li><a href="#">Оборудование 4-го поколения</a></li>
+                            <li><a href="#">Оборудование 2-го поколения</a></li>
+                            <li><a href="#">Баллоны, крепление баллонов</a></li>
+                            <li><a href="#">Форсунки</a></li>
+                            <li><a href="#">Фильтры</a></li>
+                            <li><a href="#">Ремкоплекты</a></li>
+                            <li><a href="#">Шланги и трубки </a></li>
+                            <li><a href="#">Электроклапаны бензина, газа</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="footer-column">
+                    <h5>Информация</h5>
+                    <nav>
+                        <ul class="nav-list">
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Доставка и оплата</a></li>
+                            <li><a href="#">Гарантия</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Полезно знать</a></li>
+                            <li><a href="#">Консультация специалиста</a></li>
+                            <li><a href="#">Акции</a></li>
+                            <li><a href="#">Установка ГБО</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="footer-column">
+                    <h5>Контакты</h5>
+                    <nav>
+                        <ul class="nav-list contact-list">
+                            <li>
+                                <i class="icon-marker"></i>
+                                <address>г. Харьков, ул. Шевченко 238</address>
+                            </li>
+                            <li><i class="icon-tel-footer"></i>
+                                <div class="link-wrapper"><a href="tel:0951293303">095-129-33-03</a>, <a href="tel:0687373343">068-73-73-343</a></div>
+                            </li>
+                            <li><i class="icon-envelope"></i><a href="mailto:&#111;&#112;&#116;&#105;&#109;&#097;&#108;&#103;&#097;&#115;&#064;&#109;&#097;&#105;&#108;&#046;&#114;&#117;">&#111;&#112;&#116;&#105;&#109;&#097;&#108;&#103;&#097;&#115;&#064;&#109;&#097;&#105;&#108;&#046;&#114;&#117;</a></li>
+                        </ul>
+                    </nav>
+                    <h5>Личный кабинет</h5>
+                    <nav>
+                        <ul class="nav-list">
+                            <li> <a href="#" class="login-link">Вход</a>
+                                <span>/</span>
+                                <a href="#" class="login-link">регистрация</a></li>
+                            <li><a href="#">Корзина</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="footer-column">
+                    <h5>Задайте нам вопрос</h5>
+                    <form action="#" class="question-form">
+                        <div class="row">
+                            <input type="text" placeholder="Имя">
+                        </div>
+                        <div class="row">
+                            <input type="email" placeholder="Электронный адрес" required>
+                        </div>
+                        <div class="row">
+                            <input type="text" placeholder="Тема вопроса">
+                        </div>
+                        <div class="row">
+                            <textarea cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-submit"><i class="icon-paperplane"></i> <span>Отправить</span></button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <div class="copy">
+                Сopiright <a href="#">OPTimalgas</a> 2016
+            </div>
+        </div>
+    </footer>
+  </div>
+    <script src="build/js/vendor.js"></script>
+    <script src="build/js/app.js"></script>
+</body>
+</html>
