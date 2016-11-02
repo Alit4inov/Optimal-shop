@@ -1,7 +1,7 @@
 {
   "name": "markup-starter-jc",
   "version": "0.1.0",
-  "homepage": "git+https://bitbucket.org/justcoded/npm_jcn_markup_starter",
+  "homepage": "",
   "authors": [
     "Justcoded"
   ],
@@ -23,7 +23,9 @@
     "jquery": "~2.2.4",
     "normalize-css": "~3.0.3",
     "include-media": "~1.4.2",
+    "bootstrap-sass": "^3.3.7",
     "owl.carousel": "^2.1.6",
-    "matchHeight": "matchheight#^0.7.0"
+    "matchHeight": "matchheight#^0.7.0",
+    "bootstrap-modal": "https://github.com/jschr/bootstrap-modal.git#^2.2.6"
   }
 }

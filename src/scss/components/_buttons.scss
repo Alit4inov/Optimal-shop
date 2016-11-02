@@ -13,6 +13,10 @@
     &-primary {
         background-color: $brand-orange;
         color: $white;
+        transition: color .3s;
+        &:hover {
+            color: $blue;
+        }
     }
     &-submit {
         @extend %clearfix;

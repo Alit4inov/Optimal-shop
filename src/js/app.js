@@ -2,8 +2,54 @@
 jQuery(function() {
     initOpenClose();
     initTabs();
+    modals.init({
+    selectorToggle: '[data-modal]', // Modal toggle selector
+    selectorWindow: '[data-modal-window]', // Modal window selector
+    selectorClose: '[data-modal-close]', // Modal window close selector
+    modalActiveClass: 'active', // Class applied to active modal windows
+    modalBGClass: 'modal-bg', // Class applied to the modal background overlay
+    preventBGScroll: true, // Boolean, prevents background content from scroll if true
+    preventBGScrollHtml: true, // Boolean, adds overflow-y: hidden to <html> if true (preventBGScroll must also be true)
+    preventBGScrollBody: true, // Boolean, adds overflow-y: hidden to <body> if true (preventBGScroll must also be true)
+    backspaceClose: true, // Boolean, whether or not to enable backspace/delete button modal closing
+    stopVideo: true, // Boolean, if true, stop videos when tab closes
+    callbackOpen: function ( toggle, modal ) {}, // Functions to run after opening a modal
+    callbackClose: function ( toggle, modal ) {} // Functions to run after closing a modal
+    });
 });
 
+jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up"></div><div class="quantity-button quantity-down"></div></div>').insertAfter('.quantity input');
+    jQuery('.quantity').each(function() {
+      var spinner = jQuery(this),
+        input = spinner.find('input[type="number"]'),
+        btnUp = spinner.find('.quantity-up'),
+        btnDown = spinner.find('.quantity-down'),
+        min = input.attr('min'),
+        max = input.attr('max');
+
+      btnUp.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue >= max) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue + 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+
+      btnDown.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue <= min) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue - 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+
+    });
 
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
