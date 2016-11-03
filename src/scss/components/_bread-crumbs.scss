@@ -16,4 +16,14 @@
 			}
 		}
 	}
+	.active {
+			a {
+			color: $blue;
+			cursor: default;
+    		pointer-events: none;
+    		&:hover {
+    			color: $blue;
+    		}
+		}
+	}
 }

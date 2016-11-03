@@ -447,7 +447,7 @@ $container-max-width: 80em;
 				  span {
 					position: absolute;
 					display: inline-block;
-					left: 18px;
+					left: 35px;
 					font-size: 14px;
 					line-height: 26px;
 					@include media('<phone') {
@@ -460,6 +460,7 @@ $container-max-width: 80em;
 				{
 				  -webkit-appearance: none;
 				  margin: 0;
+				  width: auto;
 				}
 
 				input[type=number]
@@ -468,7 +469,7 @@ $container-max-width: 80em;
 				}
 
 				.quantity input {
-				  width: 60px;
+				  width: 80px;
 				  height: 26px;
 				  line-height: 1.2;
 				  float: left;

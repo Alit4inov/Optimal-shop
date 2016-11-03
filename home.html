@@ -44,90 +44,13 @@
               </div>
               <a href="#" class="login-link" data-modal="#modal-login">Вход</a>
               <span>&nbsp;/&nbsp;</span>
-                  <div class="modal login-window" data-modal-window id="modal-login">
-                    <a  class="close" data-modal-close>x</a>
-                    <h5>ВХОД В ИНТЕРНЕТ-МАГАЗИН</h5>
-                        <form action="#" class="reg-form">
-                            <div class="modal-row">
-                                <label for="login-name">Логин: *</label>
-                                <input type="text" id="login-name" placeholder="Мобильный телефон" required>
-                            </div>
-                            <div class="modal-row">
-                                <label for="login-psw">Пароль: *</label>
-                                <input type="password" id="login-psw" placeholder="" required>
-                            </div>
-                            <div class="modal-row">
-                                <button type="submit" class="btn btn-primary">Войти</button>
-                            <a href="#" class="reg-link">Зарегестрироваться</a>
-                            </div>
-                            <a href="#" class="forgot">Забыли пароль?</a>
-                        </form>
-                  </div>
               <a href="#" class="login-link" data-modal="#modal-reg" >регистрация</a>
-              <div class="modal reg-window" data-modal-window id="modal-reg">
-                <a  class="close" data-modal-close>x</a>
-                <h5>РЕГИСТРАЦИЯ</h5>
-                    <form action="#" class="reg-form">
-                        <div class="modal-row">
-                            <label for="reg-name">Имя: *</label>
-                            <input type="text" id="reg-name" placeholder="Введите имя" required>
-                        </div>
-                        <div class="modal-row">
-                            <label for="mail">E-mail: *</label>
-                            <input type="email" id="mail" placeholder="Адрес электронный почты" required>
-                        </div>
-                        <div class="modal-row">
-                            <label for="tel-number">Номер телефона (логин): *</label>
-                            <input type="text" id="tel-number" placeholder="Мобильный телефон" required>
-                        </div>
-                        <div class="modal-row">
-                            <label for="psw">Придумайте пароль: *</label>
-                            <input type="password" id="psw" placeholder="6 или более символов" required>
-                        </div>
-                        <div class="modal-row">
-                            <label for="confirm-psw">Придумайте пароль: *</label>
-                            <input type="password" id="confirm-psw" placeholder="Введите пароль еще раз" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Зарегестрироваться</button>            
-                    </form>
-              </div>
             </div>
             <div class="cart-block">
               <button class="cart" data-modal="#modal-cart">
                 <i class="icon-cart"></i>
                 <span class="quantity-cart">1</span>
               </button>
-              <div class="modal cart-window" data-modal-window id="modal-cart">
-                <a  class="close" data-modal-close>x</a>
-                <h5>Корзина</h5>
-                    <div class="cart-row">
-                        <div class="order-info">
-                            <a href="#" class="img-holder"><img src="build/images/img1.jpg" alt="Баллон 
-                                315х753 55 л,
-                                Green Gas">
-                            </a>
-                            <div class="img-description">
-                                Баллон 
-                                315х753 55 л,
-                                Green Gas
-                                <span class="price">1400</span>
-                            </div>
-                        </div>
-                        <div class="order-price-info">
-                            <div class="quantity">
-                               <input type="number" min="1" max="9" step="1" value="2"> 
-                               <span>шт.</span>
-                            </div>
-                            <span class="sum">2800 грн.</span>
-                        </div>
-                    </div>
-                    <div class="divider"></div>
-                    <span class="result"><span>Итого:&nbsp;&nbsp;</span>2800грн.</span>
-                    <div class="cart-row footer-row">
-                        <a href="#" class="cont-link">Продолжить покупки</a>
-                        <button class="btn btn-primary">Оформить заказ</button>
-                    </div>        
-               </div>
             </div>
         </div>
       </div>
@@ -228,24 +151,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal call-back-window" data-modal-window id="modal-call-back">
-            <a  class="close" data-modal-close>x</a>
-            <h5>ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</h5>
-                <span>Заполните соответствующие поля и мы свяжемся с Вами в течение  нескольких часов</span>
-                <form action="#" class="reg-form">
-                    <div class="modal-row">
-                        <label for="call-tel">Номер телефона: *</label>
-                        <input type="tel" id="call-tel" placeholder="Мобильный телефон" required>
-                    </div>
-                    <div class="modal-row">
-                        <label for="name2">Ваше имя: *</label>
-                        <input type="text" id="name2" placeholder="" required>
-                    </div>
-                    <div class="modal-row center-flex">
-                        <button type="submit" class="btn btn-primary">Заказать звонок</button>
-                    </div>
-                </form>
             </div>
         </section>
     <main>
@@ -679,6 +584,103 @@
             </div>
         </div>
     </footer>
+    <div class="modal login-window" data-modal-window id="modal-login">
+        <a  class="close" data-modal-close>&times;</a>
+        <h5>ВХОД В ИНТЕРНЕТ-МАГАЗИН</h5>
+        <form action="#" class="reg-form">
+            <div class="modal-row">
+                <label for="login-name">Логин: *</label>
+                <input type="text" id="login-name" placeholder="Мобильный телефон" required>
+            </div>
+            <div class="modal-row">
+                <label for="login-psw">Пароль: *</label>
+                <input type="password" id="login-psw" placeholder="" required>
+            </div>
+            <div class="modal-row">
+                <button type="submit" class="btn btn-primary">Войти</button>
+            <a href="#" class="reg-link">Зарегестрироваться</a>
+            </div>
+            <a href="#" class="forgot">Забыли пароль?</a>
+        </form>
+    </div>
+    <div class="modal reg-window" data-modal-window id="modal-reg">
+    <a  class="close" data-modal-close>&times;</a>
+    <h5>РЕГИСТРАЦИЯ</h5>
+        <form action="#" class="reg-form">
+            <div class="modal-row">
+                <label for="reg-name">Имя: *</label>
+                <input type="text" id="reg-name" placeholder="Введите имя" required>
+            </div>
+            <div class="modal-row">
+                <label for="mail">E-mail: *</label>
+                <input type="email" id="mail" placeholder="Адрес электронный почты" required>
+            </div>
+            <div class="modal-row">
+                <label for="tel-number">Номер телефона (логин): *</label>
+                <input type="text" id="tel-number" placeholder="Мобильный телефон" required>
+            </div>
+            <div class="modal-row">
+                <label for="psw">Придумайте пароль: *</label>
+                <input type="password" id="psw" placeholder="6 или более символов" required>
+            </div>
+            <div class="modal-row">
+                <label for="confirm-psw">Придумайте пароль: *</label>
+                <input type="password" id="confirm-psw" placeholder="Введите пароль еще раз" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Зарегестрироваться</button>            
+        </form>
+    </div>
+    <div class="modal cart-window" data-modal-window id="modal-cart">
+        <a  class="close" data-modal-close>&times;</a>
+        <h5>Корзина</h5>
+        <form action="#">
+            <div class="cart-row">
+                <div class="order-info">
+                    <a href="#" class="img-holder"><img src="build/images/img1.jpg" alt="Баллон 
+                        315х753 55 л,
+                        Green Gas">
+                    </a>
+                    <div class="img-description">
+                        Баллон 
+                        315х753 55 л,
+                        Green Gas
+                        <span class="price">1400</span>
+                    </div>
+                </div>
+                <div class="order-price-info">
+                    <div class="quantity">
+                       <input type="number" min="1" max="999" step="1" value="2"> 
+                       <span>шт.</span>
+                    </div>
+                    <span class="sum">2800 грн.</span>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <span class="result"><span>Итого:&nbsp;&nbsp;</span>2800грн.</span>
+            <div class="cart-row footer-row">
+                <a href="#" class="cont-link">Продолжить покупки</a>
+                <button class="btn btn-primary">Оформить заказ</button>
+            </div>
+        </form>        
+    </div>
+    <div class="modal call-back-window" data-modal-window id="modal-call-back">
+    <a  class="close" data-modal-close>&times;</a>
+    <h5>ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</h5>
+        <span>Заполните соответствующие поля и мы свяжемся с Вами в течение  нескольких часов</span>
+        <form action="#" class="reg-form">
+            <div class="modal-row">
+                <label for="call-tel">Номер телефона: *</label>
+                <input type="tel" id="call-tel" placeholder="Мобильный телефон" required>
+            </div>
+            <div class="modal-row">
+                <label for="name2">Ваше имя: *</label>
+                <input type="text" id="name2" placeholder="" required>
+            </div>
+            <div class="modal-row center-flex">
+                <button type="submit" class="btn btn-primary">Заказать звонок</button>
+            </div>
+        </form>
+    </div>
   </div>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script src="build/js/vendor.js"></script>
