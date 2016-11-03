@@ -26,5 +26,6 @@
     "bootstrap-sass": "^3.3.7",
     "owl.carousel": "^2.1.6",
     "matchHeight": "matchheight#^0.7.0",
+    "modals": "https://github.com/cferdinandi/modals.git#^10.0.0"
   }
 }

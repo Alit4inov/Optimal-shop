@@ -23,6 +23,11 @@
         @include media('<=tablet') {
             padding-right: 15px;
         }
+         @include media('<phone') {
+        padding-right: 0;	
+         
+         }
+        		
         .item-photo {
             border: 1px solid $gray1;
             display: flex;
@@ -107,7 +112,11 @@
         color: $dark-blue;
         text-transform: none;
         font-weight: 700;
-        margin-bottom: 20px;
+        margin-bottom: 8px;
+		font-size: 	20px;
+		letter-spacing: 0;
+		line-height: 1.1;
+		text-align: left;		
     }
     .price {
         font-size: 24px;
@@ -196,3 +205,5 @@
     			
     }
 }
+
+
