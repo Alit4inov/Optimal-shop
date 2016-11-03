@@ -182,7 +182,7 @@ main {
 		}
 	}
 }
-.tab-popular {
+.tab-popular, .goods-thumb-holder {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
@@ -636,6 +636,17 @@ main {
 		    padding: 10px 15px;
 			font-size: 12px;
 		    }
+		}
+	}
+}
+
+.goods-thumb-holder {
+	margin-bottom: 32px; 
+}
+.category {
+	.container {
+		.goods-block {
+		margin-bottom: 10px;
 		}
 	}
 }

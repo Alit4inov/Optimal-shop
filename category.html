@@ -177,8 +177,13 @@
       </nav>
     </header>
     <main>
-      <div id="content">
+      <div id="content" class="category">
         <div class="container">
+            <ul class="bread-crumbs">
+                <li><a href="#">Главная</a>&nbsp;>&nbsp;</li>
+                <li><a href="#">Оборудование 4-го поколения</a>&nbsp;>&nbsp;</li>
+                <li><a href="#">Форсунки, штуцеры</a></li>
+            </ul>
             <aside class="category-select-block">
                 <h5 class="opener-category">Каталог товаров<i></i><span class="cat-icon"><img src="build/images/catalog.png" alt="catalog-icon"></span></h5>
                 <ul class="category-list">
@@ -281,17 +286,17 @@
             <strong>В этом разделе вы найдете самый широкий выбор того, что тут можно найти и из того, что найти нельзя. 
             Мы предлагаем только качественную продукцию от ведущих производителей кондитерских изделий.</strong>
             <div class="filter">
-                <span class="quantity">Найдено:<span class="result">1 234</span>товара</span>
+                <span class="quantity">Найдено:&nbsp;<span class="result">1 234</span>&nbsp;товара</span>
                 <div class="filter-select">
                     <form action="#">
-                        <label for="sort">Сортировка:</label>
+                        <label for="sort">Сортировка:&nbsp;</label>
                         <select name="sort" id="sort">
                             <option value="#">по популярности</option>
                             <option value="#">по популярности</option>
                             <option value="#">по популярности</option>
                             <option value="#">по популярности</option>
                         </select>
-                        <label for="ppg">На странице:</label>
+                        <label for="ppg">На странице:&nbsp;</label>
                         <select name="goods-per-page" id="gpp">
                             <option value="24">24</option>
                             <option value="12">12</option>
@@ -299,7 +304,7 @@
                     </form>
                 </div>
             </div>
-            <span class="current-page"></span>
+            <span class="current-page">Страница&nbsp;<span>1</span>&nbsp;из&nbsp;<span>26</span></span>
             <ul class="pagination">
                 <li class="active"><a href="#">1</a></li>
                 <li><a href="#">2</a></li>
@@ -307,7 +312,7 @@
                 <li><a href="#" class="dots">...</a></li>
                 <li><a href="#">26</a></li>
             </ul>
-                        <div class="tab-popular">
+                        <div class="goods-thumb-holder">
                             <div class="goods-thumb">
                                 <a href="#">
                                     <div class="img-holder">
@@ -393,6 +398,13 @@
                                 </div>
                             </div>
                         </div>
+                        <ul class="pagination">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#" class="dots">...</a></li>
+                            <li><a href="#">26</a></li>
+                        </ul>
 
 
             </div>
@@ -483,7 +495,9 @@
         </div>
     </footer>
   </div>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script src="build/js/vendor.js"></script>
-    <script src="build/js/app.js"></script>
+    <script src="build/js/app.js" defer></script>
+    <script src="build/js/custom-map.js"></script>
 </body>
 </html>

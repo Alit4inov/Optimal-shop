@@ -1,0 +1,19 @@
+.bread-crumbs {
+	@extend %listreset;
+	margin: 47px 0 28px 0;
+	li {
+		color: $brand-orange;
+		display: inline-block;
+		vertical-align: middle;
+		a {
+			color: $brand-orange;
+			font-size: 14px;
+			line-height: 24px;
+			vertical-align: text-top;
+			transition: color .3s;
+			&:hover {
+				color: $blue;
+			}
+		}
+	}
+}

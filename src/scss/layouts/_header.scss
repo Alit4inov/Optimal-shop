@@ -267,7 +267,7 @@
 		@include media('<=tablet') {
 			opacity: 0;
 			position: absolute;
-			z-index: 9999;
+			z-index: 0;
 			top: 38px;
 			width: 100%;
 			background-color: $blue;

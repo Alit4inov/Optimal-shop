@@ -1,15 +1,18 @@
 .goods-block {
 	h1 {
 		font-size: 24px;
+		line-height: 50px;
 		color: $brand-orange;
 		text-align: center;
 		font-family: map-deep-get($base, font-Days);
 		letter-spacing: 3px;
 	}
 	strong {
+		display: inline-block;
 		color: $dark-blue;
 		font-size: 16px;
 		font-weight: 600;
+		margin-bottom: 35px;
 	}
 }
 
@@ -19,5 +22,24 @@
 	color: $dark-blue;
 	display: flex;
 	justify-content: space-between;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 600;
+	select {
+		font-size: 12px;
+		font-weight: 400;
+		height: 22px;
+		line-height: 22px;
+		margin-right: 20px;
+		&:last-child {
+			margin: 0;
+		}
+	}
 }
-
+.current-page {
+	display: inline-block;
+	color: $dark-blue;
+	font-size: 14px;
+	font-weight: 600;
+	margin-bottom: 50px;
+}
