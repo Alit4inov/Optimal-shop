@@ -8,11 +8,6 @@
 		min-width: 24px;
 		min-height: 24px;
 		vertical-align: middle;
-		border-radius: 100%;
-		transition: background-color 0.3s;
-		&:hover {
-				background-color: $brand-orange;
-			}
 		a {
 			display: block;
 			line-height: 24px;
@@ -20,8 +15,12 @@
 			transition: color .3s;
 			font-size: 16px;
 			font-weight: 600;
+			border-radius: 100%;
+			background-color: transparent;
+			transition: all 0.3s;
 			&:hover {
 				color: $white;
+				background-color: $brand-orange;
 			}
 		}
 		.dots {
@@ -31,6 +30,7 @@
 			}
 		}
 		.active {
+			border-radius: 100%;
 			background-color: $brand-orange;
 			a {
 				color: $white;
