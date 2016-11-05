@@ -57,8 +57,8 @@ $(document).ready(function() {
         autoplay: true,
         dotsEach: "2"
     });
-  
-  
+
+
 });
 
 function initTabs() {
@@ -72,7 +72,7 @@ function initTabs() {
         attrib: 'data-tab',
         defaultTab: false
     });
-      jQuery('ul.user-type').tabset({
+    jQuery('ul.user-type').tabset({
         tabLinks: 'a.tab-selector',
         attrib: 'data-tab',
         defaultTab: false
@@ -133,14 +133,42 @@ $(".item-images .owl-carousel").owlCarousel({
 });
 
 
-      $('.advice .owl-carousel').owlCarousel({
-        items: 3,
-        loop: true,
-        autoplay:false,
-        nav: true,
-        dots:false,
-         margin: 90
-    });
+$('.advice .owl-carousel').owlCarousel({
+    items: 3,
+    loop: true,
+    autoplay: true,
+    nav: true, 
+    dots: false,
+    margin: 65,
+
+    responsive: {
+
+        0: {
+
+            items: 1
+
+        },
+
+        600: {
+
+            items:2,
+                margin: 20
+        },
+
+        960: {
+
+            items: 3,
+                margin: 65
+        },
+
+        1200: {
+
+            items: 3,
+  margin: 65
+        }
+
+    }
+});
 
 jQuery(document).ready(function() {
 

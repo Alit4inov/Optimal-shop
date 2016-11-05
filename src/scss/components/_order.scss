@@ -23,34 +23,60 @@
         font-weight: 700;
         margin-bottom: 10px;
     }
+
     .user-type {
         @extend %listreset;
         border-bottom: 3px solid $dark-blue;
         line-height: 1.7;
         margin-bottom: 20px;
+         @include media('<tablet') {
+            margin-bottom: 5px;
+         
+         }
+                
         li {
             display: inline-block;
         }
         a {
             font-size: 14px;
-            padding: 5px 15px;
+            padding: 5px 12px;
             background-color: #6f818c;
             display: inline-block;
+            @include media('<desktop') {
+                font-size: 11px;
+                padding: 5px 5px;
+            }
             &.active {
                 background-color: $dark-blue;
             }
         }
     }
     .input-row {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         color: $dark-blue;
+         @include media('<tablet') {
+            margin-bottom: 5px;
+         
+         }
+                
+        & + h2 {
+            margin: 31px 0 19px;
+             @include media('<tablet') {
+                margin: 5px 0;
+             
+             }
+                    
+        }
+        & + h2 + .input-row {
+            margin-bottom: 12px;
+        }
         label {
             font-family: Roboto;
             font-size: 12px;
             font-weight: 700;
             width: 100%;
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 1px;
         }
         input[type="text"],
         input[type="phone"],
@@ -62,13 +88,28 @@
             background-color: $white;
             border: 1px solid $dark-blue;
             font-size: 14px;
+             @include media('<tablet') {
+                max-width: none;
+             
+             }
+                    
         }
     }
     h2 {
-        margin: 20px 0;
+        margin: 15px 0;
+    }
+    .user-tab {
+        .btn.btn-primary {
+            padding: 8px;
+            font-size: 16px;
+        }
     }
     .radio-group {
-        margin-bottom: 20px;
+        margin-bottom: 11px;
+        padding-top: 8px;
+        & + .input-row + h2 {
+            margin-bottom: 7px;
+        }
         input[type="radio"] {
             opacity: 0;
             width: 0;
@@ -76,7 +117,12 @@
             margin-bottom: 15px;
             & + label {
                 position: relative;
-                padding-left: 22px;
+                padding-left: 17px;
+                margin-left: -4px;
+                white-space: nowrap;
+                max-width: 100%;
+                text-overflow: ellipsis;
+                overflow: hidden;
                 &:before {
                     content: '';
                     position: absolute;
@@ -103,6 +149,10 @@
                 }
             }
         }
+        .radio-row {
+            line-height: .85;
+            font-size: 14px;
+        }
         input[type="radio"]:checked + label:after {
             opacity: 1;
         }
@@ -114,33 +164,54 @@
 }
 
 .user-contact-data {
-    width: 40%;
+    width: 34.5%;
     float: left;
+    @include media('<tablet') {
+        width: 100%;
+    }
 }
 
 .you-order {
     @extend %clearfix;
-    width: 48%;
+    width: 51%;
     float: right;
-    padding-top: 50px;
-    padding-left: 20px;	
-     @include media('<widescreen') {
-    		width: 60%;
-    		display: flex;	
-    		align-items: center;	
-    		flex-direction: column;	
-    		justify-content: center;	
-     
-     }
-    			
-    .cart-window {
-        float: right;
-        border: 1px solid grey;
-        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.55);
+    padding-top: 34px;
+    padding-left: 20px;
+       @include media('<widescreen') {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
     }
+    @include media('<desktop') {
+        width: 65%;
+    }
+    @include media('<tablet') {
+        width: 100% ;
+        padding-left: 0;
+    }
+ 
     .cart-window {
         @extend #modal-cart.cart-window;
-        margin-bottom: 100px;
+        border: 1px solid grey;
+        margin-bottom: 52px;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.55);
+        margin-bottom: 53px;
+        position: static;
+        @include media('<desktop') {
+            width: 100%;
+            padding: 10px;
+        }
+        & + h5 {
+            margin-bottom: 35px;
+             @include media('<tablet') {
+                margin-bottom: 10px;
+                margin-top: 5px;
+             
+             }
+                    
+        }
     }
     .advice {
         float: right;
@@ -154,41 +225,151 @@
 }
 
 .advice {
-	max-width: 500px;
-	float: left !important	;	
+    max-width: 500px;
+    float: left !important;
     .owl-carousel {
+        max-width: 431px;
+        margin-bottom: 20px;
         .owl-item {
+            font-size: 12px;
+            a {
+                color: $black;
+                display: block;
+                font-size: 12px;
+            }
+            &:hover .hidden-info {
+                opacity: 1;
+                visibility: visible;
+            }
             font-size: 15px;
             p {
                 margin-bottom: 10px;
+                font-size: 12px;
             }
             .price {
                 color: #eb7f00;
             }
             .img-holder {
-                margin-bottom: 10px;
+                margin-bottom: 20px;
+                padding: 10px 0;
+                overflow: hidden;
                 border: 1px solid $dark-blue;
             }
+            img {
+                width: 100%;
+            }
+            .price {
+                font-weight: bold;
+                font-size: 16px;
+            }
+        }
+        .hidden-info {
+            @include animate(opacity visibility);
+            @include media('<desktop') {
+                display: none !important;
+            }
+            opacity: 0;
+            visibility: 0;
+            border: 2px solid $dark-blue;
+            padding: 3px;
+            width: 100px;
+            max-height: 250px;
+            overflow: auto;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            z-index: 9999;
+            background: white;
+            font-size: 10px;
         }
     }
     .owl-nav {
         position: absolute;
-        top: 50%;
+        top: 29%;
         width: 100%;
+        font-size: 0;
+        @include media('<desktop') {
+            display: none;
+        }
         .owl-prev {
+            @include animate(opacity);
             right: auto;
             left: -80px;
             position: absolute;
+            font-size: 0;
+            width: 24px;
+            height: 49px;
+            overflow: hidden;
+            background: transparent;
+            display: inline-block;
+            &:hover {
+                background: transparent;
+                opacity: 0.7;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: 0;
+                width: 1px;
+                height: 100px;
+                background-color: #000;
+                transform: rotate(45deg)
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: 0;
+                width: 1px;
+                height: 100px;
+                background-color: #000;
+                transform: rotate(-45deg)
+            }
             @include media('<1400px') {
                 left: -40px;
             }
         }
         .owl-next {
+            @include animate(opacity);
+            font-size: 0;
             left: auto;
             position: absolute;
+            position: absolute;
+            font-size: 0;
+            width: 24px;
+            height: 49px;
+            overflow: hidden;
+            display: inline-block;
             right: -80px !important;
+            transform: rotate(180deg);
+            background: transparent;
+            &:hover {
+                background: transparent;
+                opacity: 0.7;
+            }
             @include media('<1400px') {
                 right: -40px !important;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: 0;
+                width: 1px;
+                height: 100px;
+                background-color: #000;
+                transform: rotate(-45deg)
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: 0;
+                width: 1px;
+                height: 100px;
+                background-color: #000;
+                transform: rotate(45deg)
             }
         }
     }

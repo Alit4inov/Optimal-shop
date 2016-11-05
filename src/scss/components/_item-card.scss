@@ -2,7 +2,16 @@
     @extend %clearfix;
     .top-info {
         @extend %clearfix;
-        margin-bottom: 30px;
+        margin-bottom: 44px;
+         @include media('<desktop') {
+          margin-bottom:  25px;
+        }
+           @include media('<=tablet') {
+          margin-bottom:  15px;
+        }
+        @include media('<phone') {
+             margin-bottom:  10px;
+        }
     }
     .item-images {
         width: 50%;
@@ -23,11 +32,9 @@
         @include media('<=tablet') {
             padding-right: 15px;
         }
-         @include media('<phone') {
-        padding-right: 0;	
-         
-         }
-        		
+        @include media('<phone') {
+            padding-right: 0;
+        }
         .item-photo {
             border: 1px solid $gray1;
             display: flex;
@@ -112,20 +119,40 @@
         color: $dark-blue;
         text-transform: none;
         font-weight: 700;
-        margin-bottom: 8px;
-		font-size: 	20px;
-		letter-spacing: 0;
-		line-height: 1.1;
-		text-align: left;		
+        margin-bottom: 20px;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: 1.1;
+        text-align: left;
+        @include media('<desktop') {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        @include media('<tablet') {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
     }
     .price {
         font-size: 24px;
         color: $brand-orange;
         display: inline-block;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        @include media('<desktop') {
+            margin-bottom: 10px;
+        }
+        @include media('<tablet') {
+            margin-bottom: 5px;
+        }
     }
     p {
-        margin-bottom: 20px;
+        margin-bottom: 36px;
+        @include media('<desktop') {
+            margin-bottom: 10px;
+        }
+        @include media('<tablet') {
+            margin-bottom: 5px;
+        }
     }
     .btns-row {
         display: flex;
@@ -160,8 +187,14 @@
     li {
         display: flex;
         justify-content: space-between;
-        padding-bottom: 8px;
+        padding-bottom: 13px;
         font-weight: 700;
+           @include media('<desktop') {
+            margin-bottom: 6px;
+        }
+        @include media('<tablet') {
+            margin-bottom: 3px;
+        }
     }
     .value {
         font-style: normal;
@@ -173,37 +206,37 @@
     .info-tab-list {
         @extend %listreset;
         font-size: 16px;
-       line-height: 1.8;
-      
+        line-height: 1.8;
         li {
             display: inline-block;
             font-size: 16px;
         }
         a {
             background-color: $blue;
-            padding: 5px 18px;
+            padding: 5px 28px;
             margin-right: -2px;
             font-size: 16px;
-    	 @include media('<tablet') {
-    	 	font-size: 12px;
-    	 	padding: 5px;
-    	 }
-
+                @include media('<desktop') {
+                
+                padding: 5px 10px;
+            }
+            @include media('<tablet') {
+                font-size: 12px;
+                padding: 5px;
+            }
             &.active {
                 background-color: #6f99b1;
             }
         }
     }
-    .info-content{
-    	padding: 26px 30px ;color: $dark-blue;font-size: 14px;
-    	min-height: 229px;
-    	 border: 1px solid $gray1;
-    	 @include media('<desktop') {
-    		padding: 10px;
-    	 
-    	 }
-    			
+    .info-content {
+        padding: 26px 30px;
+        color: $dark-blue;
+        font-size: 14px;
+        min-height: 229px;
+        border: 1px solid $gray1;
+        @include media('<desktop') {
+            padding: 10px;
+        }
     }
 }
-
-

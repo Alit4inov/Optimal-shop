@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optimal Gas</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700&quot;" rel="stylesheet">
+    <link rel="icon" href="build/images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
     <link media="all" rel="stylesheet" href="build/css/vendor.css">
     <link media="all" rel="stylesheet" href="build/css/style.css">
 </head>
@@ -41,12 +42,12 @@
                         <div class="icon-box icon-box-login">
                             <i class="icon-user"></i>
                         </div>
-                        <a href="#" class="login-link">Вход</a>
+                        <a href="#" class="login-link" data-modal="#modal-login">Вход</a>
                         <span>&nbsp;/&nbsp;</span>
-                        <a href="#" class="login-link">регистрация</a>
+                        <a href="#" class="login-link" data-modal="#modal-reg">регистрация</a>
                     </div>
                     <div class="cart-block">
-                        <button class="cart">
+                        <button class="cart" data-modal="#modal-cart">
                             <i class="icon-cart"></i>
                             <span class="quantity-cart">1</span>
                         </button>
@@ -89,7 +90,7 @@
                     <div id="search-block">
                         <button class="search-opener"><i class="icon-search"></i></button>
                         <form class="search-slide" action="#">
-                            <input class="search-field" type="search" name="#">
+                            <input class="search-field" type="search" name="#" required>
                             <button class="submit-seacrh" type="submit" value="поиск">
                                 <i class="icon-search"></i>
                             </button>
@@ -98,60 +99,6 @@
                 </div>
             </nav>
         </header>
-        <section class="slider">
-            <div class="owl-carousel owl-theme">
-                <div class="slide-bg" style="background-image: url(build/images/slide1.jpg);">
-                    <div class="container">
-                        <div class="text-holder">
-                            <h1><span class="upper">OPT</span>IMAL <span class="colour">GAS</span></h1>
-                            <h2 class="h1 ">ОПТОВАЯ  И  РОЗНИЧНАЯ  ПРОДАЖА  ГБО</h2>
-                            <strong class="slogan">Начни экономить уже сегодня - закажи бесплатную консультацию </strong>
-                            <a href="#" class="btn btn-primary">Заказать обратный звонок</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-bg" style="background-image: url(build/images/slide1.jpg);">
-                    <div class="container">
-                        <div class="text-holder">
-                            <h1><span class="upper">OPT</span>IMAL <span class="colour">GAS</span></h1>
-                            <h2 class="h1 ">ОПТОВАЯ  И  РОЗНИЧНАЯ  ПРОДАЖА  ГБО</h2>
-                            <strong class="slogan">Начни экономить уже сегодня - закажи бесплатную консультацию </strong>
-                            <a href="#" class="btn btn-primary">Заказать обратный звонок</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-bg" style="background-image: url(build/images/slide1.jpg);">
-                    <div class="container">
-                        <div class="text-holder">
-                            <h1><span class="upper">OPT</span>IMAL <span class="colour">GAS</span></h1>
-                            <h2 class="h1 ">ОПТОВАЯ  И  РОЗНИЧНАЯ  ПРОДАЖА  ГБО</h2>
-                            <strong class="slogan">Начни экономить уже сегодня - закажи бесплатную консультацию </strong>
-                            <a href="#" class="btn btn-primary">Заказать обратный звонок</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-bg" style="background-image: url(build/images/slide1.jpg);">
-                    <div class="container">
-                        <div class="text-holder">
-                            <h1><span class="upper">OPT</span>IMAL <span class="colour">GAS</span></h1>
-                            <h2 class="h1 ">ОПТОВАЯ  И  РОЗНИЧНАЯ  ПРОДАЖА  ГБО</h2>
-                            <strong class="slogan">Начни экономить уже сегодня - закажи бесплатную консультацию </strong>
-                            <a href="#" class="btn btn-primary">Заказать обратный звонок</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-bg" style="background-image: url(build/images/slide1.jpg);">
-                    <div class="container">
-                        <div class="text-holder">
-                            <h1><span class="upper">OPT</span>IMAL <span class="colour">GAS</span></h1>
-                            <h2 class="h1 ">ОПТОВАЯ  И  РОЗНИЧНАЯ  ПРОДАЖА  ГБО</h2>
-                            <strong class="slogan">Начни экономить уже сегодня - закажи бесплатную консультацию </strong>
-                            <a href="#" class="btn btn-primary">Заказать обратный звонок</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <main>
             <div class="container">
                 <ul class="bread-crumbs">
@@ -162,7 +109,7 @@
                     <li><a href="#">удилённый для рукава D 6</a></li>
                 </ul>
                 <aside class="category-select-block">
-                    <h5 class="opener-category">Каталог товаров</h5>
+                    <h5 class="opener-category">Каталог товаров<i></i><span class="cat-icon"><img src="build/images/catalog.png" alt="catalog-icon"></span></h5>
                     <ul class="category-list">
                         <li class="category-item">
                             <div class="category-link">
@@ -268,10 +215,10 @@
                                             <img src="build/images/item1.jpg" alt="item image"></a>
                                     </div>
                                     <div class="item-photo">
-                                        <a href="#"> <img src="http://fakeimg.pl/370x370/?text=img2"></a>
+                                        <a href="#"> <img src="http://fakeimg.pl/370x370/?text=img2" alt="img desc"></a>
                                     </div>
                                     <div class="item-photo">
-                                        <a href="#"> <img src="http://fakeimg.pl/75x75/?text=low-res-img"></a>
+                                        <a href="#"> <img src="http://fakeimg.pl/75x75/?text=low-res-img" alt="img desc"></a>
                                     </div>
                                 </div>
                             </div>
@@ -305,8 +252,8 @@
                             </ul>
                             <div class="info-content">
                                 <div id="descr">Самый крутой штуцер на свете. Подойдет как для домашнего использования так и для рабочих целей. </div>
-                                 <div id="char">характеристика Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit rerum porro asperiores, mollitia ullam, nemo possimus iure autem facilis, ipsam provident harum delectus minus explicabo ad. Est minus animi earum.   </div>
-                                  <div id="review">OBZOR Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolores, possimus saepe consequatur illum eos magnam error necessitatibus corporis molestias? </div>
+                                <div id="char">характеристика Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit rerum porro asperiores, mollitia ullam, nemo possimus iure autem facilis, ipsam provident harum delectus minus explicabo ad. Est minus animi earum. </div>
+                                <div id="review">OBZOR Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolores, possimus saepe consequatur illum eos magnam error necessitatibus corporis molestias? </div>
                             </div>
                         </div>
                     </div>
@@ -396,6 +343,101 @@
                 </div>
             </div>
         </footer>
+    </div>
+    <div class="modal login-window" data-modal-window id="modal-login">
+        <a class="close" data-modal-close>&times;</a>
+        <h5>ВХОД В ИНТЕРНЕТ-МАГАЗИН</h5>
+        <form action="#" class="reg-form">
+            <div class="modal-row">
+                <label for="login-name">Логин: *</label>
+                <input type="text" id="login-name" placeholder="Мобильный телефон" required>
+            </div>
+            <div class="modal-row">
+                <label for="login-psw">Пароль: *</label>
+                <input type="password" id="login-psw" placeholder="" required>
+            </div>
+            <div class="modal-row">
+                <button type="submit" class="btn btn-primary">Войти</button>
+                <a href="#" class="reg-link">Зарегестрироваться</a>
+            </div>
+            <a href="#" class="forgot">Забыли пароль?</a>
+        </form>
+    </div>
+    <div class="modal reg-window" data-modal-window id="modal-reg">
+        <a class="close" data-modal-close>&times;</a>
+        <h5>РЕГИСТРАЦИЯ</h5>
+        <form action="#" class="reg-form">
+            <div class="modal-row">
+                <label for="reg-name">Имя: *</label>
+                <input type="text" id="reg-name" placeholder="Введите имя" required>
+            </div>
+            <div class="modal-row">
+                <label for="mail">E-mail: *</label>
+                <input type="email" id="mail" placeholder="Адрес электронный почты" required>
+            </div>
+            <div class="modal-row">
+                <label for="tel-number">Номер телефона (логин): *</label>
+                <input type="text" id="tel-number" placeholder="Мобильный телефон" required>
+            </div>
+            <div class="modal-row">
+                <label for="psw">Придумайте пароль: *</label>
+                <input type="password" id="psw" placeholder="6 или более символов" required>
+            </div>
+            <div class="modal-row">
+                <label for="confirm-psw">Придумайте пароль: *</label>
+                <input type="password" id="confirm-psw" placeholder="Введите пароль еще раз" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Зарегестрироваться</button>
+        </form>
+    </div>
+    <div class="modal cart-window" data-modal-window id="modal-cart">
+        <a class="close" data-modal-close>&times;</a>
+        <h5>Корзина</h5>
+        <form action="#">
+            <div class="cart-row">
+                <div class="order-info">
+                    <a href="#" class="img-holder"><img src="build/images/img1.jpg" alt="Баллон 
+                        315х753 55 л,
+                        Green Gas">
+                    </a>
+                    <div class="img-description">
+                        Баллон 315х753 55 л, Green Gas
+                        <span class="price">1400</span>
+                    </div>
+                </div>
+                <div class="order-price-info">
+                    <div class="quantity">
+                        <input type="number" min="1" max="999" step="1" value="2">
+                        <span>шт.</span>
+                    </div>
+                    <span class="sum">2800 грн.</span>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <span class="result"><span>Итого:&nbsp;&nbsp;</span>2800грн.</span>
+            <div class="cart-row footer-row">
+                <a href="#" class="cont-link">Продолжить покупки</a>
+                <button class="btn btn-primary">Оформить заказ</button>
+            </div>
+        </form>
+    </div>
+    <div class="modal call-back-window" data-modal-window id="modal-call-back">
+        <a class="close" data-modal-close>&times;</a>
+        <h5>ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</h5>
+        <span>Заполните соответствующие поля и мы свяжемся с Вами в течение  нескольких часов</span>
+        <form action="#" class="reg-form">
+            <div class="modal-row">
+                <label for="call-tel">Номер телефона: *</label>
+                <input type="tel" id="call-tel" placeholder="Мобильный телефон" required>
+            </div>
+            <div class="modal-row">
+                <label for="name2">Ваше имя: *</label>
+                <input type="text" id="name2" placeholder="" required>
+            </div>
+            <div class="modal-row center-flex">
+                <button type="submit" class="btn btn-primary">Заказать звонок</button>
+            </div>
+        </form>
     </div>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script src="build/js/vendor.js"></script>
