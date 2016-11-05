@@ -1,20 +1,33 @@
-.goods-block {
-	h1 {
-		font-size: 24px;
-		line-height: 50px;
-		color: $brand-orange;
-		text-align: center;
-		font-family: map-deep-get($base, font-Days);
-		letter-spacing: 3px;
-	}
-	strong {
-		display: inline-block;
-		color: $dark-blue;
-		font-size: 16px;
-		font-weight: 600;
-		margin-bottom: 35px;
+.category {
+	.container {
+		.goods-block {
+			h1 {
+				font-size: 24px;
+				line-height: 50px;
+				color: $brand-orange;
+				text-align: center;
+				font-family: map-deep-get($base, font-Days);
+				letter-spacing: 3px;
+				@include media('<tablet') {
+					font-size: 18px;
+					line-height: 40px;
+				}
+			}
+			strong {
+				display: inline-block;
+				color: $dark-blue;
+				font-size: 16px;
+				font-weight: 600;
+				margin-bottom: 35px;
+				@include media('<tablet') {
+					font-size: 14px;
+					text-align: center;
+				}
+			}
+		}
 	}
 }
+
 
 .filter {
 	color: $dark-blue;
@@ -63,6 +76,7 @@
 	font-weight: 400;
 	height: 22px;
 	line-height: 22px;
+	padding-bottom: 2px;
 	}
 	&:last-child {
 		margin: 0;
