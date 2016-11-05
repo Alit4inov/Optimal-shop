@@ -1,4 +1,4 @@
-<div>jQuery(function() {
+jQuery(function() {
         initOpenClose();
         initTabs();
         modals.init({
@@ -15,7 +15,7 @@
             callbackOpen: function(toggle, modal) {}, // Functions to run after opening a modal
             callbackClose: function(toggle, modal) {} // Functions to run after closing a modal
         });
-    });
+    }); 
     
     jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up"></div><div class="quantity-button quantity-down"></div></div>').insertAfter('.quantity input');
     jQuery('.quantity').each(function() {
@@ -139,7 +139,7 @@
         autoplay: true,
         nav: true, 
         dots: false,
-        margin: 65,
+        margin: 63,
     
         responsive: {
     
@@ -666,4 +666,4 @@
                 $.data(this, 'MobileNav', instance);
             });
         };
-    }(jQuery));</div>
+    }(jQuery));
