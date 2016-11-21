@@ -46,3 +46,8 @@ input[type='submit'] {
   -webkit-border-radius: 0;
   cursor: pointer;
 }
+
+.simplecheckout-error-text{
+  font-size: 12px !important;
+  color: $brand-orange !important;
+}
