@@ -12,6 +12,16 @@
 			}
 		}
 	}
+	.alert {
+		border: 1px solid $brand-orange;
+		padding: 6px 15px;
+		.alert-danger {
+			color: $brand-orange;
+		}
+		.alert-success {
+			color: $dark-blue;
+		}
+	} 
 }
 .well {
 	margin-bottom: 40px;
@@ -81,13 +91,3 @@
 		font-size: 16px;
 	}
 }
-.alert {
-	border: 1px solid $brand-orange;
-	padding: 6px 15px;
-	.alert-danger {
-		color: $brand-orange;
-	}
-	.alert-success {
-		color: $dark-blue;
-	}
-} 

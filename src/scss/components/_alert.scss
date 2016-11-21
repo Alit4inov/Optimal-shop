@@ -1,0 +1,55 @@
+.alert {
+    @extend %clearfix;
+    transition: color 0.3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 37px;
+    line-height: 35px;
+    background: $brand-orange !important;
+    font-size: 22px;
+    text-align: center;
+    z-index: 9999;
+    animation: shown-hide 8s linear;
+    opacity: 0;
+    visibility: hidden;
+    border: 3px solid $blue;
+    a:hover {
+        color: $blue;
+    }
+    button {
+        font-size: 30px;
+        color: $white;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        display: inline-block;
+        transform: translateY(-50%);
+        transition: color 0.3s;
+        outline: none;
+        &:hover {
+            color: $blue ;
+        }
+    }
+}
+
+@keyframes shown-hide {
+    from {
+        opacity: 0;
+        visibility: visible;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1
+    }
+    to{
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}
