@@ -12,8 +12,13 @@ jQuery(function() {
             preventBGScrollBody: true, // Boolean, adds overflow-y: hidden to <body> if true (preventBGScroll must also be true)
             backspaceClose: true, // Boolean, whether or not to enable backspace/delete button modal closing
             stopVideo: true, // Boolean, if true, stop videos when tab closes
-            callbackOpen: function(toggle, modal) {}, // Functions to run after opening a modal
-            callbackClose: function(toggle, modal) {} // Functions to run after closing a modal
+            callbackOpen: function(toggle, modal) {
+
+                $( "body" ).toggleClass( "modal-opened" )
+
+                
+            }, // Functions to run after opening a modal
+            callbackClose: function(toggle, modal) { $( "body" ).toggleClass( "modal-opened" )} // Functions to run after closing a modal
         });
     }); 
     
