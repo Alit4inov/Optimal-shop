@@ -1,0 +1,93 @@
+.login-page {
+	p {
+		@include media('<tablet') {
+			font-size: 13px;
+		}
+	}
+	.order {
+		padding: 0;
+		button {
+			@include media('<tablet') {
+			margin: 10px 0;
+			}
+		}
+	}
+}
+.well {
+	margin-bottom: 40px;
+	@include media('<tablet') {
+			margin-bottom: 25px;
+		}
+	h2 {
+		font-size: 24px;
+		@include media('<tablet') {
+			font-size: 20px;
+		}
+		@include media('<phone') {
+			font-size: 18px;
+		}
+	}
+	strong {
+		color: $blue;
+		@include media('<tablet') {
+			font-size: 18px;
+		}
+		@include media('<tablet') {
+			font-size: 16px;
+		}
+	}
+	.form-group {
+		width: 290px;
+		margin-bottom: 5px;
+		@extend %clearfix;
+		label {
+			line-height: 34px;
+			@include media('<tablet') {
+			font-size: 16px;
+			}
+		}
+	}
+	.form-control {
+		float: right;
+		max-width: 200px;
+    	width: 200px;
+    	padding: 6px 15px;
+		font-size: 16px;
+		color: $dark-blue;
+		
+		@include placeholder {
+			color: $dark-blue;
+			font-weight: 300;
+		}
+	}
+	.btn {
+		@include media('<tablet') {
+			padding: 8px 15px;
+		}
+	}
+}
+.forgot {
+	@extend .reg-link;
+	display: inline-block;
+	color: $brand-orange;
+	border-bottom: 2px solid #f9d7af;
+	transition: all .3s;
+	font-style: italic;
+		&:hover {
+		color: $brand-orange;
+		border-bottom: 2px solid $brand-orange; 
+	}
+	@include media('<tablet') {
+		font-size: 16px;
+	}
+}
+.alert {
+	border: 1px solid $brand-orange;
+	padding: 6px 15px;
+	.alert-danger {
+		color: $brand-orange;
+	}
+	.alert-success {
+		color: $dark-blue;
+	}
+} 
