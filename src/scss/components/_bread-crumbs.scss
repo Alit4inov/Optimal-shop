@@ -1,29 +1,70 @@
 .bread-crumbs {
 	@extend %listreset;
 	margin: 47px 0 28px 0;
+	@include media('<tablet') {
+	margin: 24px 0 19px 0;
+	}
 	li {
 		color: $brand-orange;
 		display: inline-block;
 		vertical-align: middle;
+		font-size: 14px;
 		a {
 			color: $brand-orange;
 			font-size: 14px;
-			line-height: 24px;
+			line-height: 26px;
 			vertical-align: text-top;
 			transition: color .3s;
+			@include media('<tablet') {
+			font-size: 12px;
+			}			
+			@include media('<phone') {
+			font-size: 10px;
+			}
 			&:hover {
 				color: $blue;
 			}
 		}
-	}
-	.active {
+		&:after {
+			content: ">";
+			margin-left: 7px;
+			font-size: 14px;
+			display: block;
+		    float: right;
+		    line-height: 26px;
+			@include media('<tablet') {
+			font-size: 12px;
+			}			
+			@include media('<phone') {
+			font-size: 10px;
+			margin-left: 4px;
+			}
+			&:last-child {
+				display: none;
+			}
+		}
+		&:last-child {
 			a {
-			color: $blue;
-			cursor: default;
-    		pointer-events: none;
-    		&:hover {
-    			color: $blue;
-    		}
+				color: $blue;
+				cursor: default;
+    			pointer-events: none;
+			}
+			&:after {
+				display: none;
+			}
 		}
 	}
+	// .active {
+	// 		&:after {
+	// 			display: none;
+	// 		}
+	// 		a {
+	// 		color: $blue;
+	// 		cursor: default;
+ //    		pointer-events: none;
+ //    		&:hover {
+ //    			color: $blue;
+ //    		}
+	// 	}
+	// }
 }

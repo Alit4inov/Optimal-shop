@@ -112,6 +112,7 @@
 	font-size: 14px;
 	color: $dark-blue;
 	font-weight: 700;
+	transition: all .3s;
 	@include media('<tablet') {
 		font-size: 10px;
 	}
@@ -220,7 +221,7 @@
 		position: relative;
 		@include media('<=tablet') {
 			height: 50px;
-			padding: 10px 20px;
+			padding: 10px 0;
 		}
 		@include media('<=phone') {
 			padding: 10px 0;
@@ -267,7 +268,7 @@
 		@include media('<=tablet') {
 			opacity: 0;
 			position: absolute;
-			z-index: 0;
+			z-index: -1;
 			top: 38px;
 			width: 100%;
 			background-color: $blue;
@@ -282,9 +283,6 @@
 				width: 100%;
 				text-align: left;
 			}
-			&.active a {
-				background-color: $brand-orange;
-			}
 			&.hover > a {
 				background-color: $dark-blue;
 				color: $white;
@@ -296,6 +294,7 @@
 			}
 		}
 		a {
+			position: relative;
 			transition: background-color 0.3s, color 0.3s;
 			color: $white;
 			text-decoration: none;
@@ -310,6 +309,9 @@
 			@include media('<=desktop') {
 				padding: 12px 8px;
 				font-size: 13px;
+			}			
+			@include media('<=tablet') {
+				padding: 5px 8px;
 			}
 			&:hover {
 				color: $white;
@@ -317,6 +319,7 @@
 			}
 		}
 		.nav-active & {
+			@extend %clearfix;
 			visibility: visible;
 			opacity: 1;
 			left: 0;
@@ -324,6 +327,9 @@
 		}
 		.drop-down {
 		position: relative;
+			&.active {
+				background-color: $dark-blue;
+			}
 			.triangle-down {
 				position: absolute;
 				top: 50%;
@@ -337,7 +343,7 @@
 					top: 80%;
 					right: 43%;
 				}
-				@include media('<tablet') {
+				@include media('<=tablet') {
 					top: 50%;
 					transform: translateY(-50%);
 					left: 100px;
@@ -346,10 +352,21 @@
 			&-content {
 				@extend %listreset;
 				position: absolute;
-				padding: 15px 15px;
-				background-color: $dark-blue;
-				opacity: 0;
-	        	visibility: hidden;
+				width: 350px;
+				padding: 15px 0;
+				background: rgba($blue, .9);
+				text-align: left;
+				z-index: 999;
+				@include media('<=desktop') {
+						padding: 15px 0px;
+						width: 300px;
+				}
+				@include media('<=tablet') {
+						position: relative;
+						width: 100%;
+						padding: 0;
+						padding-left: 15px;
+				}
 				li {
 					width: 100%;
 					@include media('<=desktop') {
@@ -363,7 +380,7 @@
 						@include triangle(10px, $white, right);
 						transition: all .3s;
 						@include media('<=desktop') {
-							margin-top: 9px;
+							margin-top: 1px;
 						}						
 						@include media('<=tablet') {
 							display: none;
@@ -402,31 +419,6 @@
 					}
 				}
 			}
-			&:hover {
-				.drop-down-content {
-					visibility: visible;
-					opacity: 1;
-					background: rgba($blue, .9);
-					top: 100%;
-					width: 350px;
-					padding: 30px 0px;
-					text-align: left;
-					z-index: 999;
-					@include media('<=desktop') {
-						padding: 15px 0px;
-						width: 300px;
-					}
-					@include media('<=tablet') {
-						position: relative;
-						width: 100%;
-						padding: 0;
-						padding-left: 15px;
-					}
-				}
-				> a {
-					background-color: $dark-blue;
-				}
-			}
 		}
 		.drop-right {
 		position: relative;
@@ -436,10 +428,15 @@
 			&-content {
 				@extend %listreset;
 				position: absolute;
+				top: -20px;
+				left: 100%;
+				width: 350px;
+				text-align: left;
 				padding: 15px 15px;
-				background-color: $dark-blue;
+				background-color: $blue;
 				opacity: 0;
-	        	visibility: hidden;
+	        	transition: opacity .5s;
+
 				li {
 					width: 100%;
 					margin-bottom: 10px;
@@ -461,15 +458,8 @@
 			}
 			&:hover {
 				.drop-right-content {
-					visibility: visible;
-					background-color: $blue;
 					opacity: 0.9;
-					position: absolute;
-					top: -20px;
-					left: 100%;
-					width: 350px;
-					text-align: left;
-					z-index: 99;
+					z-index: 10;
 					@include media('<=desktop') {
 						padding: 15px 0px;
 						width: 300px;
@@ -577,6 +567,7 @@
 			}
 			.submit-seacrh {
 				display: inline-block;
+				padding: 0;
 				width: 30px;
 				height: 30px;
 				text-align: center;
@@ -586,6 +577,10 @@
 				color: $white;
 				font-size: 0;
 				vertical-align: middle;
+				transition: opacity .3s;
+				&:hover {
+					opacity: .5
+				}
 				i {
 					font-size: 18px;
 					vertical-align: middle;

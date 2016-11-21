@@ -1,10 +1,17 @@
 main {
 	padding-top: 35px;
+	@include media('<desktop') {
+		padding-top: 25px;
+	}
+	@include media('<tablet') {
+		padding-top: 15px;
+	}
 }
 .category-select-block {
 	width: 25%;
 	padding-right: 15px;
 	float: left;
+	margin-bottom: 10px;
 	@include media('<widescreen') {
 		width: 32%
 	}
@@ -54,6 +61,11 @@ main {
 			margin-bottom: 30px;
 		}
 	}
+	.opener-category {
+		@include media('>tablet') {
+			pointer-events: none;
+		}
+	}
 }
 
 .category-item {
@@ -64,19 +76,16 @@ main {
 		@extend %clearfix;
 		position: relative;
 		width: 100%;
-		padding-right: 35px;
 		a {
 			display: inline-block;
 			float: left;
 			font-size: 16px;
 			font-weight: 600;
-			line-height: 2.5;
-			padding-left: 15px;
+			padding: 10px 35px 10px 15px;
 			transition: color .3s;
 			@include media('<desktop') {
 				font-size: 13px;
 				padding-left: 5px;
-				line-height: 2.5;
 			}
 		}
 	}
@@ -132,6 +141,9 @@ main {
 			transition: color .3s;
 			@include media('<desktop') {
 				font-size: 13px;
+			}
+			@include media('<tablet') {
+				padding: 5px 5px 5px 15px;
 			}
 		}
 	}
@@ -218,6 +230,9 @@ main {
 		@include media('<desktop') {
 		margin-bottom: 32px;
 		}
+		@include media('<tablet') {
+		margin-bottom: 16px;
+		}
 		img {
 			width: 75%;
 			height: auto;
@@ -235,6 +250,7 @@ main {
 		margin-bottom: 34px;
 		@include media('<tablet') {
 			font-size: 13px;
+			margin-bottom: 17px;
 		}
 		@include media('<phone') {
 			margin-bottom: 24px;
@@ -456,7 +472,7 @@ main {
 		}
 }
 .bg-content-block {
-	padding: 30px 0 80px 0;
+	padding: 30px 0 50px 0;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	.block-name {
@@ -578,7 +594,7 @@ main {
 	.contact-info-holder {
 	position: absolute;
 	margin-top: -476px;
-	@include media('<tablet') {
+	@include media('<=tablet') {
         margin-top: -268px;
     }
 	h5 {
@@ -656,6 +672,13 @@ main {
 	.container {
 		.goods-block {
 		margin-bottom: 10px;
+		.category-description {
+			p {
+				font-size: 16px;
+				color: $dark-blue;
+				}
+			}
+
 		}
 	}
 }
