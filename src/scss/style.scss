@@ -57,3 +57,19 @@
 .block {
 	height: 500px;
 }
+.text-page {
+	.container {
+		padding: 30px 15px;
+		h2 {
+		@include media('<tablet') {
+			font-size: 16px;
+			}
+		}
+		p {
+			color: $dark-blue;
+			@include media('<tablet') {
+			font-size: 12px;
+			}
+		}
+	}
+}

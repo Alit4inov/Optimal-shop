@@ -1,10 +1,17 @@
 main {
 	padding-top: 35px;
+	@include media('<desktop') {
+		padding-top: 25px;
+	}
+	@include media('<tablet') {
+		padding-top: 15px;
+	}
 }
 .category-select-block {
 	width: 25%;
 	padding-right: 15px;
 	float: left;
+	margin-bottom: 10px;
 	@include media('<widescreen') {
 		width: 32%
 	}
@@ -52,6 +59,11 @@ main {
 		}
 		@include media('<desktop') {
 			margin-bottom: 30px;
+		}
+	}
+	.opener-category {
+		@include media('>tablet') {
+			pointer-events: none;
 		}
 	}
 }
@@ -582,7 +594,7 @@ main {
 	.contact-info-holder {
 	position: absolute;
 	margin-top: -476px;
-	@include media('<tablet') {
+	@include media('<=tablet') {
         margin-top: -268px;
     }
 	h5 {
@@ -660,6 +672,12 @@ main {
 	.container {
 		.goods-block {
 		margin-bottom: 10px;
+		.category-description {
+			p {
+				font-size: 16px;
+				color: $dark-blue;
+				}
+			}
 
 		}
 	}

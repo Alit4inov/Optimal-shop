@@ -7,6 +7,16 @@
 		font-size: 24px;
 		letter-spacing: 3px;
 		margin-bottom: 65px;
+			@include media('<desktop') {
+			font-size: 20px;
+			margin-bottom: 35px;
+			}
+			@include media('<tablet') {
+			margin-bottom: 25px;
+			}		
+			@include media('<phone') {
+			margin-bottom: 15px;
+			}
 	}
 }
 
@@ -14,21 +24,65 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		@include media('<tablet') {
+		flex-direction: column;
+		}
 	}
 
 .news-holder {
 	width: 49%;
 	margin-bottom: 90px;
-	img {
+		@include media('<desktop') {
+		margin-bottom: 60px;
+		}
+		@include media('<tablet') {
+		width: 100%;
+		margin-bottom: 30px;
+		}		
+		@include media('<phone') {
+		margin-bottom: 20px;
+		}
+	.news-picture {
+		display: block;
 		margin-bottom: 35px;
+		@include media('<desktop') {
+		margin-bottom: 25px;
+		}
+		@include media('<tablet') {
+		margin-bottom: 20px;
+		}		
+		@include media('<phone') {
+		margin-bottom: 15px;
+		}
+			img {
+			width: 100%;
+			height: auto;
+		}
 	}
+
 	h3 {
 		font-family: map-deep-get($headings, fonts, headings-font-family);
 		text-align: left;
 		color: $dark-blue;
 		margin-bottom: 35px;
+		@include media('<desktop') {
+		font-size: 20px;
+		margin-bottom: 20px
+		}	
+		@include media('<tablet') {
+		margin-bottom: 15px;
+		}		
+		@include media('<phone') {
+		margin-bottom: 10px;
+		}
 	}
 	p {
 		color: #626262;
+		@include media('<desktop') {
+		font-size: 16px
+		}
+		@include media('<tablet') {
+		font-size: 14px
+		}
 	}
 }
