@@ -1,0 +1,90 @@
+.account-page {
+	color: $dark-blue;
+	.order {
+		padding-top: 0;
+	}
+	h1 {
+		@include media('<tablet') {
+			font-size: 18px;
+		}
+	}
+	fieldset {
+		margin-bottom: 20px;
+	}
+	.login-link {
+		color: $dark-blue;
+		font-size: 16px;
+		font-weight: 700;
+		transition: color .3s;
+		cursor: pointer;
+		&:hover {
+			color: $brand-orange;
+		}
+	}
+	.form-group {
+		width: 290px;
+		margin-bottom: 5px;
+		@extend %clearfix;
+		label {
+			line-height: 34px;
+			font-size: 16px;
+			@include media('<tablet') {
+			font-size: 13px;
+			}
+		}
+	}
+		.form-control {
+		max-width: 200px;
+    	width: 200px;
+    	padding: 6px 15px;
+		font-size: 13px;
+		color: $dark-blue;
+		border: 1px solid $dark-blue;
+		@include placeholder {
+			color: $dark-blue;
+			font-weight: 300;
+		}
+	}
+	.btn {
+		border: 0;
+		outline: 0;
+		@include media('<tablet') {
+			padding: 8px 15px;
+		}
+	}
+	.text-left {
+		padding: 5px;
+		color: $blue;
+		border: 2px solid $blue;
+		border-right: 0;
+	}
+	.text-right {
+		border: 2px solid $blue;
+		border-left: 0;
+		padding: 0 20px;
+		a {
+			@include media('<phone') {
+			margin-bottom: 5px;
+			}
+		}
+	}
+	.table-responsive {
+		margin-bottom: 20px;
+	}
+}
+
+.buttons {
+	display: block;
+	@extend %clearfix;
+}
+
+.pull-left {
+	float: left;
+	margin-left: 5px;
+	&:first-child {
+		margin-left: 0;
+	}
+}
+.pull-right {
+	float: right;
+}

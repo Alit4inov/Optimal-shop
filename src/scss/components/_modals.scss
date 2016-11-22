@@ -478,7 +478,7 @@ $container-max-width: 80em;
 				{
 				  -moz-appearance: textfield;
 				}
-
+				
 				.quantity input {
 				  width: 80px;
 				  height: 26px;
@@ -505,7 +505,6 @@ $container-max-width: 80em;
 				  position: relative;
 				  height: 26px;
 				}
-
 				.quantity-button {
 				  position: relative;
 				  cursor: pointer;
@@ -520,7 +519,6 @@ $container-max-width: 80em;
 				  -o-user-select: none;
 				  user-select: none;
 				}
-
 				.quantity-button.quantity-up {
 				  position: absolute;
 				  height: 10px !important;

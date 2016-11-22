@@ -1,0 +1,29 @@
+.product-thumb {
+	color: $dark-blue;
+	.caption {
+		h4 {
+			a {
+				color: $dark-blue;
+				transition: color .3s;
+				&:hover {
+					color: $brand-orange;
+				}
+			}
+		}
+		p {
+		@include media('<tablet') {
+			font-size: 13px;
+			}
+		}
+	}
+	.btn {
+		border: 0;
+		outline: 0;
+		@include media('<tablet') {
+			padding: 6px;
+		}
+		@include media('<phone') {
+			font-size: 10px;
+		}
+	}
+}
