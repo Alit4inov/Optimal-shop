@@ -1,0 +1,51 @@
+.reg-page {
+	text-align: center;
+	h1 {
+	@include media('<tablet') {
+		font-size: 20px;
+		}
+	}
+	p {
+		@include media('<tablet') {
+		font-size: 16px;
+		} 
+	}
+}
+.simpleregister {
+	margin-bottom: 30px;
+		.login-link {
+		color: $blue;
+		font-size: 20px;
+		font-weight: 400;
+		transition: all .3s;
+		text-decoration: underline;
+		&:hover {
+			color: $brand-orange;
+		}
+		@include media('<tablet') {
+		font-size: 16px;
+		} 
+	}
+	legend {
+		width: 100%;
+		text-align: center;
+		font-weight: 700;
+		margin-bottom: 10px;
+		@include media('<tablet') {
+		font-size: 18px;
+		} 
+	}
+	.input-row {
+		margin-bottom: 10px;
+	}
+	.btn {
+		cursor: pointer;
+		@include media('<tablet') {
+		padding: 6px 15px;
+		} 
+	}
+}
+.simplecheckout {
+	margin-top: 20px;
+	text-align: center;
+}

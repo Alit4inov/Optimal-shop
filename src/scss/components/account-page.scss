@@ -1,0 +1,135 @@
+.account-page {
+	color: $dark-blue;
+	.order {
+		padding-top: 0;
+	}
+	h1 {
+		@include media('<tablet') {
+			font-size: 18px;
+		}
+	}
+	p {
+		font-size: 16px;
+		@include media('<tablet') {
+			font-size: 14px;
+		}
+		@include media('<phone') {
+			font-size: 12px;
+		}
+	}
+	fieldset {
+		margin-bottom: 20px;
+	}
+	.login-link {
+		color: $dark-blue;
+		font-size: 16px;
+		font-weight: 900;
+		transition: color .3s;
+		cursor: pointer;
+		text-decoration: underline;
+		&:hover {
+			color: $brand-orange;
+		}
+	}
+	.form-group {
+		width: 290px;
+		margin-bottom: 5px;
+		@extend %clearfix;
+		label {
+			line-height: 34px;
+			font-size: 16px;
+			@include media('<tablet') {
+			font-size: 13px;
+			}
+		}
+	}
+		.form-control {
+		max-width: 200px;
+    	width: 200px;
+    	padding: 6px 15px;
+		font-size: 13px;
+		color: $dark-blue;
+		border: 1px solid $dark-blue;
+		@include placeholder {
+			color: $dark-blue;
+			font-weight: 300;
+		}
+	}
+	.btn {
+		border: 0;
+		outline: 0;
+		margin-bottom: 10px;
+		text-align: center;
+		@include media('<tablet') {
+			padding: 8px 15px;
+		}
+	}
+	.text-left {
+		padding: 5px;
+		color: $blue;
+		border: 2px solid $blue;
+		border-right: 0;
+	}
+	.text-right {
+		border: 2px solid $blue;
+		border-left: 0;
+		padding: 0 20px;
+		a {
+			@include media('<phone') {
+			margin-bottom: 5px;
+			}
+		}
+	}
+	.table-responsive {
+		margin-bottom: 20px;
+	}
+}
+
+.buttons {
+	display: block;
+	@extend %clearfix;
+	@extend %listreset;
+}
+.change-psw {
+	label {
+		font-size: 16px;
+		font-weight: 700;
+	}
+	.btn {
+		width: 170px;
+		line-height: 1;
+		margin-right: 5px; 
+			@include media('<tablet') {
+			width: 120px;
+		}
+	}
+}
+.address {
+	h2 {
+		@include media('<tablet') {
+			font-size: 18px;
+		}
+	}
+	.btn {
+		padding: 10px 20px; 
+		width: 180px;
+		margin-right: 5px;
+			@include media('<tablet') {
+				width: 150px;
+			}
+			@include media('<phone') {
+			font-size: 12px;
+			width: 120px;
+		}
+	}
+}
+
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.center {
+	text-align: center;
+}

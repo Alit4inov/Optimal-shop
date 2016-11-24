@@ -14,7 +14,8 @@
         background-color: $brand-orange;
         color: $white;
         transition: color .3s;
-        &:hover {
+        &:hover,
+        &:focus {
             color: $blue;
         }
     }

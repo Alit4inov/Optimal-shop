@@ -1,5 +1,8 @@
 .login-page {
 	p {
+		font-size: 16px;
+	}
+	p {
 		@include media('<tablet') {
 			font-size: 13px;
 		}
@@ -47,32 +50,34 @@
 		}
 	}
 	.form-group {
-		width: 290px;
+		width: 270px;
 		margin-bottom: 5px;
 		@extend %clearfix;
 		label {
-			line-height: 34px;
-			@include media('<tablet') {
-			font-size: 16px;
-			}
+			line-height: 26px;
+			font-size: 14px;
+			font-weight: 700;
 		}
 	}
 	.form-control {
 		float: right;
 		max-width: 200px;
     	width: 200px;
-    	padding: 6px 15px;
-		font-size: 16px;
+    	padding: 3px 10px;
+		font-size: 14px;
 		color: $dark-blue;
-		
+		border: 1px solid $dark-blue;
 		@include placeholder {
 			color: $dark-blue;
 			font-weight: 300;
 		}
 	}
 	.btn {
+		width: 170px;
+		text-align: center;
 		@include media('<tablet') {
 			padding: 8px 15px;
+			width: 120px;
 		}
 	}
 }

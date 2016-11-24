@@ -25,6 +25,10 @@
 @import 'components/login-page';
 @import 'components/alert.scss';
 @import 'components/old-price.scss';
+@import 'components/simple-register';
+@import 'components/search-result';
+@import 'components/account-page';
+@import 'components/trash';
 
 /* Vendors */
 @import 'vendors/icons';
@@ -35,7 +39,6 @@
 @import 'layouts/header';
 @import 'layouts/main';
 @import 'layouts/footer';
-@import 'components/login-page';
 
 
 .page-list {

@@ -356,6 +356,12 @@ $container-max-width: 80em;
 	.cart-row {
 		display: flex;
 		justify-content: space-between;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+		border-bottom: 2px solid $dark-blue;
+		&:last-child {
+			border-bottom: 0;
+		}
 			@include media('<phone') {
 			flex-direction: column;
 		}
@@ -369,6 +375,9 @@ $container-max-width: 80em;
 			width: 40%;
 			display: flex;
 			justify-content: space-between;
+			.btn {
+				padding: 5px 10px;
+			}
 		}
 		.btn {
 			display: inline-block;
@@ -478,7 +487,7 @@ $container-max-width: 80em;
 				{
 				  -moz-appearance: textfield;
 				}
-
+				
 				.quantity input {
 				  width: 80px;
 				  height: 26px;
@@ -505,7 +514,6 @@ $container-max-width: 80em;
 				  position: relative;
 				  height: 26px;
 				}
-
 				.quantity-button {
 				  position: relative;
 				  cursor: pointer;
@@ -520,7 +528,6 @@ $container-max-width: 80em;
 				  -o-user-select: none;
 				  user-select: none;
 				}
-
 				.quantity-button.quantity-up {
 				  position: absolute;
 				  height: 10px !important;
@@ -540,6 +547,7 @@ $container-max-width: 80em;
 				font-size: 16px;
 				font-family: map-deep-get($base, base-font-sans-serif);
 				font-weight: 900;
+				margin: 0px 5px;
 					@include media('<phone') {
 					font-size: 12px;
 				}

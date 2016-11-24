@@ -213,6 +213,7 @@ main {
 	width: 32%;
 	border: 2px solid #bdbdbd;
 	margin-bottom: 22px;
+	padding: 0 1px;
 	padding-bottom: 50px;
 	a {
 		display: block;
@@ -371,7 +372,7 @@ main {
 		height: 100%;
 		background-size: cover;
 		background-position: 50% 50%;
-		z-index: 9999;
+		z-index: 100;
 		@include media('<desktop') {
 			left: 68%;
 			width: 32%;
@@ -390,7 +391,7 @@ main {
 			top: 0;
 			left: 0;
 			position: absolute;
-			z-index: 9999;
+			z-index: 100;
 			.triangle {
 			@include triangle(400px, $blue, up-left);
 			border-right: 110px solid transparent !important;

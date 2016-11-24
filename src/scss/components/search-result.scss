@@ -1,0 +1,54 @@
+.search-result {
+	.product-thumb {
+	padding: 10px;
+	width: 70%;
+	margin: 0 auto;
+	color: $dark-blue;
+	border-bottom: 2px solid $dark-blue;
+	margin-bottom: 30px;
+	@include media('<tablet') {
+		width: 80%;
+		}
+	@extend %clearfix;
+	.image {
+		width: 30%;
+		float: left;
+	}
+	.product-thumb-description {
+		width: 70%;
+		float: left;
+		text-align: left;
+	}
+		.caption {
+			h4 {
+				a {
+					color: $dark-blue;
+					transition: color .3s;
+					&:hover {
+						color: $brand-orange;
+					}
+				}
+			}
+			p {
+			@include media('<tablet') {
+				font-size: 13px;
+				}
+			}
+		}
+		.btn {
+			border: 0;
+			outline: 0;
+			@include media('<tablet') {
+				padding: 6px;
+			}
+			@include media('<phone') {
+				font-size: 10px;
+			}
+		}
+	}
+	.text-right {
+		margin-bottom: 20px;
+    	color: $dark-blue;
+    	font-size: 16px;
+	}
+}

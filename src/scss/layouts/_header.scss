@@ -236,7 +236,7 @@
 		left: 0;
 		top: 0;
 		margin-top: -50px;
-		z-index: 99999;
+		z-index: 9998;
 		@include media('<widescreen') {
 			width: 120px;
 			height: 120px;
@@ -440,6 +440,9 @@
 				li {
 					width: 100%;
 					margin-bottom: 10px;
+					&:last-child {
+						margin-bottom: 0;
+					}
 					@include media('<=desktop') {
 						margin-bottom: 0;
 					}
@@ -452,6 +455,7 @@
 				}
 				a {
 					display: inline-block;
+					line-height: 1;
 					float: left;
 					font-family: map-deep-get($base, base-font-family);
 				}
