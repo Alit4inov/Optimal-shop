@@ -184,6 +184,18 @@
         width: 100%;
         padding-left: 0;
     }
+    .simplecheckout-block {
+        width: 100%;
+        text-transform: 20px;
+        .checkout-heading.panel-heading {
+            margin-bottom: 20px;
+            .form-control {
+                width: 100%;
+                resize: none;
+                font-size: 14px;
+            }
+        }
+    }
     .cart-window {
         @extend #modal-cart.cart-window;
         border: 1px solid grey;

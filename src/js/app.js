@@ -1,25 +1,25 @@
 jQuery(function() {
-        initOpenClose();
-        initTabs();
-        modals.init({
-            selectorToggle: '[data-modal]', // Modal toggle selector
-            selectorWindow: '[data-modal-window]', // Modal window selector
-            selectorClose: '[data-modal-close]', // Modal window close selector
-            modalActiveClass: 'active', // Class applied to active modal windows
-            modalBGClass: 'modal-bg', // Class applied to the modal background overlay
-            preventBGScroll: true, // Boolean, prevents background content from scroll if true
-            preventBGScrollHtml: true, // Boolean, adds overflow-y: hidden to <html> if true (preventBGScroll must also be true)
-            preventBGScrollBody: true, // Boolean, adds overflow-y: hidden to <body> if true (preventBGScroll must also be true)
-            backspaceClose: false, // Boolean, whether or not to enable backspace/delete button modal closing
-            stopVideo: true, // Boolean, if true, stop videos when tab closes
-            callbackOpen: function(toggle, modal) {
+    initOpenClose();
+    initTabs();
+    modals.init({
+        selectorToggle: '[data-modal]', // Modal toggle selector
+        selectorWindow: '[data-modal-window]', // Modal window selector
+        selectorClose: '[data-modal-close]', // Modal window close selector
+        modalActiveClass: 'active', // Class applied to active modal windows
+        modalBGClass: 'modal-bg', // Class applied to the modal background overlay
+        preventBGScroll: true, // Boolean, prevents background content from scroll if true
+        preventBGScrollHtml: true, // Boolean, adds overflow-y: hidden to <html> if true (preventBGScroll must also be true)
+        preventBGScrollBody: true, // Boolean, adds overflow-y: hidden to <body> if true (preventBGScroll must also be true)
+        backspaceClose: false, // Boolean, whether or not to enable backspace/delete button modal closing
+        stopVideo: true, // Boolean, if true, stop videos when tab closes
+        callbackOpen: function(toggle, modal) {
             $("body").toggleClass("modal-opened")
-            }, 
-            callbackClose: function(toggle, modal) {
-                 $("body").toggleClass("modal-opened")
-            }
-        });
-    }); 
+        },
+        callbackClose: function(toggle, modal) {
+            $("body").toggleClass("modal-opened")
+        }
+    });
+});
 
 jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up"></div><div class="quantity-button quantity-down"></div></div>').insertAfter('.quantity input');
 jQuery('.quantity').each(function() {
@@ -182,35 +182,7 @@ $('.advice .owl-carousel').owlCarousel({
     }
 });
 
-jQuery(document).ready(function() {
 
-    var dotcount = 1;
-    jQuery('.item-images .owl-dot').each(function() {
-        jQuery(this).addClass('dotnumber' + dotcount);
-        jQuery(this).attr('data-info', dotcount);
-        dotcount = dotcount + 1;
-    });
-    var slidecount = 1;
-
-    jQuery('.item-images .owl-item').not('.cloned').each(function() {
-        jQuery(this).addClass('slidenumber' + slidecount);
-        slidecount = slidecount + 1;
-    });
-
-    jQuery('.item-images .owl-dot').each(function() {
-
-        var grab = jQuery(this).data('info');
-
-        var slidegrab = jQuery('.slidenumber' + grab + ' img').attr('src');
-        console.log(slidegrab);
-
-        jQuery(this).css("background-image", "url(" + slidegrab + ")");
-
-    });
-
-
-
-});
 
 /*
  * jQuery Tabs plugin

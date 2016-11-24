@@ -3,14 +3,14 @@
     .top-info {
         @extend %clearfix;
         margin-bottom: 44px;
-         @include media('<desktop') {
-          margin-bottom:  25px;
+        @include media('<desktop') {
+            margin-bottom: 25px;
         }
-           @include media('<=tablet') {
-          margin-bottom:  15px;
+        @include media('<=tablet') {
+            margin-bottom: 15px;
         }
         @include media('<phone') {
-             margin-bottom:  10px;
+            margin-bottom: 10px;
         }
     }
     .item-images {
@@ -102,6 +102,7 @@
                 flex-shrink: 1;
                 background-position: 50% 50%;
                 background-repeat: no-repeat;
+                margin-bottom: 10px;
             }
             @include media('<phone') {
                 width: 89px;
@@ -155,11 +156,9 @@
         }
     }
     .btns-row {
-         @extend %clearfix;
-                
-        #product{
-             @extend %clearfix;
-                    
+        @extend %clearfix;
+        #product {
+            @extend %clearfix;
         }
         .btn-primary {
             font-size: 14px;
@@ -193,7 +192,7 @@
         justify-content: space-between;
         padding-bottom: 13px;
         font-weight: 700;
-           @include media('<desktop') {
+        @include media('<desktop') {
             margin-bottom: 6px;
         }
         @include media('<tablet') {
@@ -220,8 +219,7 @@
             padding: 5px 28px;
             margin-right: -2px;
             font-size: 16px;
-                @include media('<desktop') {
-                
+            @include media('<desktop') {
                 padding: 5px 10px;
             }
             @include media('<tablet') {
