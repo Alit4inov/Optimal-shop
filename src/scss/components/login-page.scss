@@ -24,6 +24,15 @@
 		.alert-success {
 			color: $dark-blue;
 		}
+	}
+	.order {
+		width: 60%;
+		@include media('<tablet') {
+			width: 80%;
+		}
+		@include media('<phone') {
+			width: 100%;
+		}
 	} 
 }
 .well {
