@@ -8,15 +8,25 @@
 			font-size: 18px;
 		}
 	}
+	p {
+		font-size: 16px;
+		@include media('<tablet') {
+			font-size: 14px;
+		}
+		@include media('<phone') {
+			font-size: 12px;
+		}
+	}
 	fieldset {
 		margin-bottom: 20px;
 	}
 	.login-link {
 		color: $dark-blue;
 		font-size: 16px;
-		font-weight: 700;
+		font-weight: 900;
 		transition: color .3s;
 		cursor: pointer;
+		text-decoration: underline;
 		&:hover {
 			color: $brand-orange;
 		}
@@ -48,6 +58,8 @@
 	.btn {
 		border: 0;
 		outline: 0;
+		margin-bottom: 10px;
+		text-align: center;
 		@include media('<tablet') {
 			padding: 8px 15px;
 		}
@@ -76,15 +88,48 @@
 .buttons {
 	display: block;
 	@extend %clearfix;
+	@extend %listreset;
+}
+.change-psw {
+	label {
+		font-size: 16px;
+		font-weight: 700;
+	}
+	.btn {
+		width: 170px;
+		line-height: 1;
+		margin-right: 5px; 
+			@include media('<tablet') {
+			width: 120px;
+		}
+	}
+}
+.address {
+	h2 {
+		@include media('<tablet') {
+			font-size: 18px;
+		}
+	}
+	.btn {
+		padding: 10px 20px; 
+		width: 180px;
+		margin-right: 5px;
+			@include media('<tablet') {
+				width: 150px;
+			}
+			@include media('<phone') {
+			font-size: 12px;
+			width: 120px;
+		}
+	}
 }
 
 .pull-left {
 	float: left;
-	margin-left: 5px;
-	&:first-child {
-		margin-left: 0;
-	}
 }
 .pull-right {
 	float: right;
+}
+.center {
+	text-align: center;
 }
