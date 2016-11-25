@@ -65,6 +65,7 @@ $container-max-width: 80em;
 		right: 0;
 		top: 0;
 		visibility: visible;
+		overflow-y: scroll;
 		-webkit-overflow-scrolling: touch;
 		@include media('<tablet') {
 		padding-top: 30px !important;
@@ -327,7 +328,6 @@ $container-max-width: 80em;
 
 #modal-cart {
 	&.cart-window {
-	top: 160px !important;
 	width: 580px;
 	padding: 40px 65px;
 	color: #333333;
@@ -480,19 +480,6 @@ $container-max-width: 80em;
 						}
 					}
 				}
-				input[type=number]::-webkit-inner-spin-button,
-				input[type=number]::-webkit-outer-spin-button
-				{
-				  -webkit-appearance: none;
-				  margin: 0;
-				  width: auto;
-				}
-
-				input[type=number]
-				{
-				  -moz-appearance: textfield;
-				}
-				
 				.quantity input {
 				  width: 80px;
 				  height: 26px;
@@ -509,44 +496,13 @@ $container-max-width: 80em;
 						font-size: 12px;
 					}
 				}
-
 				.quantity input:focus {
 				  outline: 0;
 				}
-
-				.quantity-nav {
-				  float: left;
-				  position: relative;
-				  height: 26px;
-				}
-				.quantity-button {
-				  position: relative;
-				  cursor: pointer;
-				  width: 20px;
-				  text-align: center;
-				  font-size: 13px;
-				  -webkit-transform: translateX(-100%);
-				  transform: translateX(-100%);
-				  -webkit-user-select: none;
-				  -moz-user-select: none;
-				  -ms-user-select: none;
-				  -o-user-select: none;
-				  user-select: none;
-				}
-				.quantity-button.quantity-up {
-				  position: absolute;
-				  height: 10px !important;
-				  top: 0;
-				  left: -5px;
-				  @include triangle(10px, $brand-orange, up);
-				}
-
-				.quantity-button.quantity-down {
-				  position: absolute;
-				  bottom: -1px;
-				  height: 10px !important;
-				  left: -5px;
-				  @include triangle(10px, $brand-orange, down);
+				input[type=number]::-webkit-inner-spin-button, 
+				input[type=number]::-webkit-outer-spin-button {  
+   				opacity: 1;
+   				height: 26px;
 				}
 			.sum {
 				display: inline-block;
