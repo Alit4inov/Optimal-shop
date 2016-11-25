@@ -256,11 +256,12 @@ main {
 	}
 	.thumb-footer {
 		@extend %clearfix;
+		white-space: nowrap;
 		position: absolute;
 		width: 100%;
 		bottom: 0;
 		left: 0;
-		padding-left: 22px;
+		padding-left: 10px;
 		background-color: $light;
 		.price {
 			font-family: map-deep-get($base, font-Days);

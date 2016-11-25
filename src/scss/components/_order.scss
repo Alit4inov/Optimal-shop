@@ -152,6 +152,8 @@
         label {
             font-size: 14px;
             color: $dark-blue;
+                display: inline-block;
+    line-height: 1;
         }
     }
 }
@@ -159,6 +161,11 @@
 .user-contact-data {
     width: 34.5%;
     float: left;
+     @include media('<desktop') {
+        width: 50%;
+     
+     }
+            
     @include media('<tablet') {
         width: 100%;
     }
@@ -178,7 +185,7 @@
         justify-content: center;
     }
     @include media('<desktop') {
-        width: 65%;
+        width: 50%;
     }
     @include media('<tablet') {
         width: 100%;
@@ -189,12 +196,13 @@
         text-transform: 20px;
         .checkout-heading.panel-heading {
             margin-bottom: 20px;
-            .form-control {
+           
+        }
+         .form-control {
                 width: 100%;
                 resize: none;
                 font-size: 14px;
             }
-        }
     }
     .cart-window {
         @extend #modal-cart.cart-window;

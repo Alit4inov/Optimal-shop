@@ -1,12 +1,24 @@
 .price {
-
-   .old-price {
+    white-space: nowrap;
+    line-height: 49px;
+    .old-price {
         text-decoration: line-through;
-        font-size: 15px;
-        color: gray !important;	line-height: 1;
+        font-size: 13px;
+        color: gray !important;
+        line-height: 1;
     }
-    .new-price{
-    	color: $brand-orange;
-    	font-size: 19px;
+    .new-price {
+        color: $brand-orange;
+        font-size: 19px;
+        line-height: 1;
+    }
+}
+
+.item-card {
+    .price {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }
