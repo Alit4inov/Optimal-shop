@@ -441,7 +441,6 @@
 
 				li {
 					width: 100%;
-					margin-bottom: 10px;
 					&:last-child {
 						margin-bottom: 0;
 					}
@@ -459,6 +458,7 @@
 					display: inline-block;
 					line-height: 1;
 					float: left;
+					padding-bottom: 10px;
 					font-family: map-deep-get($base, base-font-family);
 				}
 			}
