@@ -65,7 +65,7 @@
 		}
 	}
 	.text-left {
-		padding: 5px;
+		padding: 10px;
 		color: $blue;
 		border: 2px solid $blue;
 		border-right: 0;
@@ -87,6 +87,7 @@
 
 .buttons {
 	display: block;
+	margin-bottom: 15px;
 	@extend %clearfix;
 	@extend %listreset;
 }

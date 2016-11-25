@@ -1,6 +1,9 @@
 .search-result {
 	h1 {
 		text-align: center;
+		@include media('<phone') {
+			font-size: 18px;
+		}
 	}
 	.product-thumb {
 		padding: 10px;
@@ -13,6 +16,9 @@
 			width: 100%;
 			margin-bottom: 0;
 			padding-bottom: 30px;
+				&:last-child {
+					margin-bottom: 20px;
+				}
 			}
 		@extend %clearfix;
 		.image {

@@ -68,7 +68,6 @@ $container-max-width: 80em;
 		-webkit-overflow-scrolling: touch;
 		@include media('<tablet') {
 		padding-top: 30px !important;
-		position: absolute;
 		}
 
 		@media (min-width: $bp-xxsmall) {
@@ -376,7 +375,13 @@ $container-max-width: 80em;
 			display: flex;
 			justify-content: space-between;
 			.btn {
+				position: absolute;
+				left: 105%;
 				padding: 5px 10px;
+				@include media('<phone') {
+				left: 85%;
+				padding: 3px 6px;
+				}
 			}
 		}
 		.btn {
@@ -449,18 +454,18 @@ $container-max-width: 80em;
 			}
 		}
 		.order-price-info {
+			position: relative;
 			display: flex;
-			justify-content: space-between;
+			justify-content: flex-start;
 			align-items: center;
 			width: 50%;
-			padding-left: 50px;
+			padding-left: 35px;
 				@include media('<tablet') {
 					padding-left: 20px;
 				}
 				@include media('<phone') {
 					width: 100%;
 					padding: 0px;
-					justify-content: space-around;
 				}
 			.quantity {
 				  position: relative;
@@ -544,12 +549,15 @@ $container-max-width: 80em;
 				  @include triangle(10px, $brand-orange, down);
 				}
 			.sum {
+				display: inline-block;
+				margin-left: 10px;
 				font-size: 16px;
 				font-family: map-deep-get($base, base-font-sans-serif);
 				font-weight: 900;
-				margin: 0px 5px;
+				text-align: center;
 					@include media('<phone') {
 					font-size: 12px;
+					margin-left: 5px;
 				}
 			}
 		}

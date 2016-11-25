@@ -272,7 +272,9 @@
 			top: 38px;
 			width: 100%;
 			background-color: $blue;
-			padding: 20px 0;
+			padding: 0;
+			padding-top: 35px;
+			padding-bottom: 15px;
 			transition: left 0.3s, visible 0.3s, opacity 0.3s;
 		}
 		li {
@@ -432,7 +434,7 @@
 				left: 100%;
 				width: 350px;
 				text-align: left;
-				padding: 15px 15px;
+				padding: 15px 0px;
 				background-color: $blue;
 				opacity: 0;
 	        	transition: opacity .5s;
