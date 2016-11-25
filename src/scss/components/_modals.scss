@@ -167,7 +167,7 @@ $container-max-width: 80em;
 		padding: 20px 30px;
 	}
 	@include media('<phone') {
-		width: 220px;
+		width: 90%;
 		padding: 15px;
 		}
 	h5 {
@@ -239,7 +239,7 @@ $container-max-width: 80em;
 	width: 400px;
 	padding: 40px 57px;
 	@include media('<phone') {
-		width: 220px;
+		width: 90%;
 		padding: 15px 15px;
 	}
 	h5 {
@@ -330,6 +330,7 @@ $container-max-width: 80em;
 	&.cart-window {
 	width: 580px;
 	padding: 40px 65px;
+	padding-bottom: 100px;
 	color: #333333;
 	@extend %clearfix;
 		@include media('<tablet') {
@@ -337,7 +338,7 @@ $container-max-width: 80em;
 			padding: 30px 45px;
 		}		
 		@include media('<phone') {
-			width: 220px;
+			width: 90%;
 			padding: 10px 10px;
 		}
 		h5 {
@@ -376,7 +377,8 @@ $container-max-width: 80em;
 			justify-content: space-between;
 			.btn {
 				position: absolute;
-				left: 105%;
+				right: 0;
+				top: 0;
 				padding: 5px 10px;
 				@include media('<phone') {
 				left: 85%;
@@ -457,7 +459,6 @@ $container-max-width: 80em;
 			position: relative;
 			display: flex;
 			justify-content: flex-start;
-			align-items: center;
 			width: 50%;
 			padding-left: 35px;
 				@include media('<tablet') {
@@ -572,7 +573,7 @@ $container-max-width: 80em;
 	width: 450px;
 	padding: 40px 57px;
 	@include media('<phone') {
-		width: 220px;
+		width: 90%;
 		padding: 5px;
 	}
 	h5 {
