@@ -1,0 +1,28 @@
+.page-404 {
+	color: orange;
+	h1 {
+	@include media('<phone') {
+		font-size: 18px;
+		}
+	}
+	.order {
+		margin: 0 auto;
+		padding: 0;
+		width: 80%;
+		p {
+			font-size: 16px;
+			text-align: center;
+			@include media('<phone') {
+			font-size: 13px;
+			}
+		}
+		.btn {
+			@include media('<phone') {
+			padding: 8px 10px;
+			}
+		}
+	}
+	.buttons {
+		text-align: center;
+	}
+}

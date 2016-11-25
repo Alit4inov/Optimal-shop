@@ -5,6 +5,14 @@
 			font-size: 18px;
 		}
 	}
+	p {
+		font-size: 16px;
+		color: $dark-blue;
+		text-align: center;
+		@include media('<phone') {
+			font-size: 13px;
+		}
+	}
 	.product-thumb {
 		padding: 10px;
 		width: 70%;
