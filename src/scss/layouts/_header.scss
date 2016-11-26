@@ -434,7 +434,6 @@
 				left: 100%;
 				width: 350px;
 				text-align: left;
-				padding: 15px 0px;
 				background-color: $blue;
 				opacity: 0;
 	        	transition: opacity .5s;
@@ -443,6 +442,9 @@
 					width: 100%;
 					&:last-child {
 						margin-bottom: 0;
+						a {
+							padding-bottom: 8px;
+						}
 					}
 					@include media('<=desktop') {
 						margin-bottom: 0;
@@ -458,7 +460,8 @@
 					display: inline-block;
 					line-height: 1;
 					float: left;
-					padding-bottom: 10px;
+					line-height: 1.2;
+					padding-top: 8px;
 					font-family: map-deep-get($base, base-font-family);
 				}
 			}

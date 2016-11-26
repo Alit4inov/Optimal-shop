@@ -72,13 +72,12 @@
 		color: $dark-blue;
 		margin-bottom: 35px;
 		transition: color .3s;
-		font-size: 20px;
+		font-size: 18px;
 		@include media('<desktop') {
 		margin-bottom: 20px
 		}	
 		@include media('<tablet') {
 		margin-bottom: 15px;
-		font-size: 18px;
 		}		
 		@include media('<phone') {
 		margin-bottom: 10px;
@@ -90,11 +89,23 @@
 	}
 	p {
 		color: #626262;
-		@include media('<desktop') {
-		font-size: 16px
-		}
+		font-size: 16px;
 		@include media('<tablet') {
 		font-size: 14px
 		}
+	}
+}
+.video-page {
+	h1 {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	p {
+		font-size: 16px;
+	}
+	.note-video-clip {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 30px;
 	}
 }

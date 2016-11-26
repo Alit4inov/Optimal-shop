@@ -222,6 +222,41 @@
                 margin-top: 5px;
             }
         }
+        .cart-row {
+            .order-price-info {
+                @include media('<desktop') {
+                    padding-left: 20px;
+                } 
+                .btn {
+                @include media('<desktop') {
+                    right: auto;
+                    top: 35%;
+                    } 
+                @include media('<tablet') {
+                    right: 0;
+                    top: 0;
+                    } 
+                }
+                .quantity input {
+                 @include media('<desktop') {
+                    width: 60px;
+                    font-size: 13px;
+                    } 
+                @include media('<tablet') {
+                    width: 80px;
+                    font-size: 14px;
+                    } 
+                }
+                .sum {
+                 @include media('<desktop') {
+                    font-size: 13px;
+                    } 
+                @include media('<tablet') {
+                    font-size: 14px;
+                    } 
+                }
+            }
+        }
     }
     .advice {
         float: right;
@@ -231,7 +266,8 @@
         color: #eb7f00;
         font-family: Roboto;
         font-weight: 700;
-    }
+    }  
+
 }
 
 .advice {
