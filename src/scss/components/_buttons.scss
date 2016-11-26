@@ -6,6 +6,7 @@
     font-weight: bold;
     font-family: (map-get($base, Roboto));
     display: inline-block;
+    border:none;
     @include media('<tablet') {
         padding: 15px 20px;
         font-size: 14px;
