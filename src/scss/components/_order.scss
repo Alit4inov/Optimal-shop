@@ -223,6 +223,12 @@
             }
         }
         .cart-row {
+            .row {
+                width: 100%;
+                height: 26px;
+                display: flex;
+                align-items: center;
+            }
             .order-price-info {
                 @include media('<desktop') {
                     padding-left: 20px;

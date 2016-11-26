@@ -410,8 +410,9 @@ $container-max-width: 80em;
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				overflow: hidden;
 				width: 50%;
-				height: 100px;
+				height: auto;
 				border: 1px solid #666666;
 					@include media('<phone') {
 					width: 100%;
@@ -435,9 +436,12 @@ $container-max-width: 80em;
 				padding: 0 0 40px 18px;
 				font-size: 14px;
 				font-weight: 600;
+				text-align: left;
 				@include media('<phone') {
 					width: 100%;
 					font-size: 12px;
+					text-align: center;
+					padding-left: 0;
 				}
 				.price {
 					position: absolute;
@@ -451,6 +455,12 @@ $container-max-width: 80em;
 					text-align: left;
 					@include media('<phone') {
 						font-size: 12px;
+						position: relative;
+						left: 0;
+						bottom: 0;
+						width: 100%;
+						text-align: center;
+						margin-top: 10px;
 					}
 				}
 			}
