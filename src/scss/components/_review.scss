@@ -1,0 +1,54 @@
+.table-review {
+    width: 100%;
+    tr td {
+        vertical-align: middle;
+        padding: 5px 0;
+    }
+    tr td:first-child:not(:only-child) {
+        font-weight: bold;
+        font-size: 18px;
+        & + td {
+            text-align: right;
+        }
+    }
+    p {
+        margin-bottom: 25px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid $dark-blue;
+    }
+}
+
+#form-review {
+    @extend %clearfix;
+    float: right;
+    width: 50%;
+    h2{
+    	text-align: right;
+    }
+    @include media('<desktop') {
+        width: 100%;
+    }
+    label {
+        min-width: 100px;
+        display: inline-block;
+    }
+    .form-group {
+        margin-bottom: 10px;
+        & > div {
+            display: flex;
+            input,
+            textarea {
+                flex-grow: 1;
+                resize: none;
+                min-width: 0;
+                width: auto;
+            }
+        }
+    }
+    input,
+    textarea {}
+}
+
+#review {
+    @extend %clearfix;
+}
