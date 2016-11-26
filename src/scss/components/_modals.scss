@@ -65,7 +65,6 @@ $container-max-width: 80em;
 		right: 0;
 		top: 0;
 		visibility: visible;
-		overflow-y: scroll;
 		-webkit-overflow-scrolling: touch;
 		@include media('<tablet') {
 		padding-top: 30px !important;
@@ -329,7 +328,7 @@ $container-max-width: 80em;
 #modal-cart {
 	&.cart-window {
 	width: 580px;
-	padding: 40px 65px;
+	padding: 40px 35px;
 	padding-bottom: 100px;
 	color: #333333;
 	@extend %clearfix;
@@ -401,6 +400,7 @@ $container-max-width: 80em;
 			display: flex;
 			justify-content: space-between;
 			width: 50%;
+			overflow: hidden;
 			@include media('<phone') {
 				width: 100%;
 				flex-direction: column;
@@ -424,8 +424,8 @@ $container-max-width: 80em;
 					height: auto;
 					@include media('<phone') {
 						border: 1px solid #666666;
-					width: 50%;
-					height: 80%;
+					width: 80px;
+					height: 80px;
 					}
 				}
 			}
@@ -460,7 +460,7 @@ $container-max-width: 80em;
 			display: flex;
 			justify-content: flex-start;
 			width: 50%;
-			padding-left: 35px;
+			padding-left: 25px;
 				@include media('<tablet') {
 					padding-left: 20px;
 				}

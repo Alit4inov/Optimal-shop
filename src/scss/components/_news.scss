@@ -72,8 +72,8 @@
 		color: $dark-blue;
 		margin-bottom: 35px;
 		transition: color .3s;
-		@include media('<desktop') {
 		font-size: 20px;
+		@include media('<desktop') {
 		margin-bottom: 20px
 		}	
 		@include media('<tablet') {
