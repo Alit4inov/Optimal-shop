@@ -5,21 +5,24 @@
     top: 0;
     left: 0;
     right: 0;
-    min-height: 37px;
-    line-height: 35px;
+    bottom: auto;
+     padding:2px 30px; 
+    line-height: 1.1;
     background: $brand-orange !important;
-    font-size: 22px;
+    font-size: 16px;
     text-align: center;
     z-index: 9999;
     animation: shown-hide 8s linear;
     opacity: 0;
     visibility: hidden;
-    border: 3px solid $blue;
+    border: 1px solid $blue;
+    height: auto;
     a:hover {
         color: $blue;
     }
     button {
-        font-size: 30px;
+        font-size: 24px;
+        line-height: 1;
         color: $white;
         background-color: transparent;
         border: none;

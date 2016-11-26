@@ -19,8 +19,13 @@ jQuery(function() {
             $("body").toggleClass("modal-opened")
         }
     });
+
 });
 
+$(document).on('click', '.alert button', function () {
+    $(this).parent('div').fadeOut();
+});
+    
 
 $(document).ready(function() {
     $('.owl-carousel').owlCarousel({
