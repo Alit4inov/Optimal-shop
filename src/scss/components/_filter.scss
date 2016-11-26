@@ -52,6 +52,7 @@
 		@include media('<desktop') {
 		flex-wrap: wrap;
 		flex-direction: column;
+		text-align: right;
 	}
 	@include media('<tablet') {
 		text-align: center;

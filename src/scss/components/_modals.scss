@@ -339,6 +339,7 @@ $container-max-width: 80em;
 		@include media('<phone') {
 			width: 90%;
 			padding: 10px 10px;
+			padding-bottom: 50px;
 		}
 		h5 {
 			color: $blue;
@@ -380,8 +381,8 @@ $container-max-width: 80em;
 				top: 0;
 				padding: 5px 10px;
 				@include media('<phone') {
-				left: 85%;
-				padding: 3px 6px;
+				left: auto;
+				padding: 0 4px;
 				}
 			}
 		}
@@ -425,8 +426,8 @@ $container-max-width: 80em;
 					height: auto;
 					@include media('<phone') {
 						border: 1px solid #666666;
-					width: 80px;
-					height: 80px;
+					width: 50%;
+					height: auto;
 					}
 				}
 			}
