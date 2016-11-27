@@ -236,11 +236,14 @@
                 .btn {
                 @include media('<desktop') {
                     right: auto;
-                    top: 35%;
+                    top: 45%;
                     } 
                 @include media('<tablet') {
                     right: 0;
                     top: 0;
+                    }  
+                @include media('<phone') {
+                    padding: 6px 9px;
                     } 
                 }
                 .quantity input {
@@ -250,7 +253,13 @@
                     } 
                 @include media('<tablet') {
                     width: 80px;
+                    height: 20px;
                     font-size: 14px;
+                    } 
+                }
+                .quantity span {
+                    @include media('<tablet') {
+                   line-height: 20px;
                     } 
                 }
                 .sum {

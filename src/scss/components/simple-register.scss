@@ -13,6 +13,13 @@
 	.user-contact-data {
 		text-align: left;
 	}
+	.radio-row {
+		&:first-child {
+			label {
+				margin-left: -11px !important;
+			}
+		}
+	}
 }
 .simpleregister {
 	margin-bottom: 30px;

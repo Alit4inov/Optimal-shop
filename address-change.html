@@ -1,7 +1,7 @@
 <html dir="ltr" lang="ru"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Мои Адреса</title>
     <base href="http://localhost:8080/">
     <link rel="icon" href="build/images/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
@@ -13,12 +13,20 @@
 
 <script defer="" src="http://optimalgas.lotomsl.com/catalog/view/javascript/common.js" type="text/javascript"></script>
 
+<link href="catalog/view/theme/default/stylesheet/simple.css" type="text/css" rel="stylesheet" media="screen">
+<link href="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css" type="text/css" rel="stylesheet" media="screen">
 
-<link href="http://optimalgas.lotomsl.com/test4" rel="canonical">
 <link href="http://optimalgas.lotomsl.com/image/catalog/favicon[1].png" rel="icon">
 
+<script src="catalog/view/javascript/jquery/ajaxupload.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/jquery/datetimepicker/moment.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/jquery/jquery.maskedinput.min.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/easyTooltip.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/simple.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/simplepage.js" type="text/javascript"></script>
 
-    <style type="text/css">.js-slide-hidden{position:absolute !important;left:-9999px !important;top:-9999px !important;display:block !important}</style><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/2/intl/ru_ALL/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/2/intl/ru_ALL/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/2/intl/ru_ALL/stats.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttp%3A%2F%2Foptimalgas.lotomsl.com%2Fmp3-players%2Ftest4&amp;4sAIzaSyAaIl3sRnHH7g29FKAdvZSlum46EfQq7ns&amp;callback=_xdc_._99eqyq&amp;token=62458"></script></head>
+    <style type="text/css">.js-slide-hidden{position:absolute !important;left:-9999px !important;top:-9999px !important;display:block !important}</style><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/2/intl/ru_ALL/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/2/intl/ru_ALL/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/2/intl/ru_ALL/stats.js"></script></head>
 
 <body>
     <div class="wrapper">
@@ -58,13 +66,60 @@
                         <a href="http://optimalgas.lotomsl.com/logout" class="login-link">Выход</a>
             
                     </div>
-                    <div class="cart-block">
+                      <div class="cart-block">
                         <button class="cart" data-modal="#modal-cart">
                             <i class="icon-cart"></i>
-                            <span class="quantity-cart" id="cart-total"></span>
+                            <span class="quantity-cart" id="cart-totalp"><span id="cart-count">2</span></span>
                         </button>
                     </div>
-                </div>
+    
+    <div class="modal cart-window" data-modal-window="" id="modal-cart">
+        <a class="close" data-modal-close="">×</a>
+        <h5>Корзина</h5>
+        <form action="#">
+<div id="cart">
+         
+
+                                         <div class="cart-row">
+                                            <div class="order-info">
+                                                <a target="_blank" href="http://optimalgas.lotomsl.com/imac" class="img-holder"><img src="http://optimalgas.lotomsl.com/image/cache/catalog/demo/imac_1-47x47.jpg" alt="iMac" title="iMac">                                                </a>
+                                                
+                                                <div class="img-description">
+                                                    iMac                                                </div>
+                                            </div>
+                                            <div class="order-price-info">
+                                                <span class="sum">100.00грн</span>
+ <button class="btn btn-primary" onclick="cart.remove('948');" type="button">
+                                    ×
+                                </button>
+                                            </div>
+                                              
+                                        </div>
+                                                                                <div class="cart-row">
+                                            <div class="order-info">
+                                                <a target="_blank" href="http://optimalgas.lotomsl.com/komplekt-gbo-na-karbjurator-solex" class="img-holder"><img src="http://optimalgas.lotomsl.com/image/cache/catalog/komplekt-gbo-na-karbyurator-solex_5ec9cdcf9e571a6_800x600[1]-47x47.jpg" alt="Комплект гбо на карбюратор Solex" title="Комплект гбо на карбюратор Solex">                                                </a>
+                                                
+                                                <div class="img-description">
+                                                    Комплект гбо на карбюратор Solex                                                </div>
+                                            </div>
+                                            <div class="order-price-info">
+                                                <span class="sum">3150.00грн</span>
+ <button class="btn btn-primary" onclick="cart.remove('947');" type="button">
+                                    ×
+                                </button>
+                                            </div>
+                                              
+                                        </div>
+                                                                                       <div class="cart-row footer-row">
+                <a href="#" class="cont-link" data-modal-close="">Продолжить покупки</a>
+          <a href="http://optimalgas.lotomsl.com/simplecheckout" class="btn btn-primary">Оформить заказ</a>
+            </div>
+
+
+
+</div>
+</form>
+    </div>                </div>
           </div>
           <nav class="main-nav">
             <div class="container nav-container">
@@ -198,151 +253,143 @@
               </div>
             </div>
           </nav>
-        </header><main>
-<div id="content" class="category">
-<div class="container">
-  <ul class="bread-crumbs">
-<li typeof="v:Breadcrumb"><a href="http://optimalgas.lotomsl.com/" rel="v:url" property="v:title">Главная</a></li>
-<li typeof="v:Breadcrumb"><a href="http://optimalgas.lotomsl.com/mp3-players" rel="v:url" property="v:title">MP3 плееры</a></li>
-<li typeof="v:Breadcrumb"><a href="http://optimalgas.lotomsl.com/mp3-players/test4" rel="v:url" property="v:title">test 4</a></li>
-  </ul>
-  <aside id="column-left" class="col-sm-3 hidden-xs">
-       <aside class="category-select-block">
-                        <h5 class="opener-category">Каталог товаров<i></i><span class="cat-icon"><img src="build/images/catalog.png" alt="catalog-icon"></span></h5>
-                        <ul class="category-list js-slide-hidden">
+        </header><div id="content">
+    <div class="container reg-page">
+    <div class="order">      <h1>Мои Адреса</h1><div class="simple-content">
+        <script type="text/javascript">
+    (function($) {
+            $(function(){
+                if (typeof Simplepage === "function") {
+                var simplepage = new Simplepage({
+                    additionalParams: "",
+                    additionalPath: "",
+                    mainUrl: "index.php?route=account/simpleaddress/insert",
+                    mainContainer: "#simplepage_form",
+                    useAutocomplete: 0,
+                    useGoogleApi: 0,
+                    scrollToError: 1,
+                    javascriptCallback: function() {$('#cart > ul').load('index.php?route=common/cart/info ul li');/*$('nav#top').load('index.php?route=common/simple_connector/header #top > div');*/}
+                });
 
-         
-        
-
-                    <li class="category-item">
-                                <div class="category-link">
-                                    <a href="http://optimalgas.lotomsl.com/gazovie-reduktora">Газовые редуктора</a>
-                                </div>
-                            </li>
-
-           
-
-                    <li class="category-item">
-                                <div class="category-link">
-                                    <a href="http://optimalgas.lotomsl.com/komplekty-gbo">Комплекты гбо</a>
-                                </div>
-                            </li>
-
-                   <li class="category-item"> 
-                                <div class="category-link">
-                                    <a href="http://optimalgas.lotomsl.com/desktops">Компьютеры</a>
-                                    <div class="category-open">
-                                        <span class="triangle"></span>
-                                    </div>
-                                </div>
-                                <ul class="hidden-list js-slide-hidden">
-                                                                       <li><a href="http://optimalgas.lotomsl.com/desktops/pc">PC (0)</a></li>
-                                           <li><a href="http://optimalgas.lotomsl.com/desktops/mac">Mac (1)</a></li>
-                                                                       </ul>
-                            </li>
-
-
-
-                     
-                   <li class="category-item"> 
-                                <div class="category-link">
-                                    <a href="http://optimalgas.lotomsl.com/laptop-notebook">Ноутбуки</a>
-                                    <div class="category-open">
-                                        <span class="triangle"></span>
-                                    </div>
-                                </div>
-                                <ul class="hidden-list js-slide-hidden">
-                                                                       <li><a href="http://optimalgas.lotomsl.com/laptop-notebook/macs">Macs (0)</a></li>
-                                           <li><a href="http://optimalgas.lotomsl.com/laptop-notebook/windows">Windows (0)</a></li>
-                                                                       </ul>
-                            </li>
-
-
-
-                     
-           
-
-                    <li class="category-item">
-                                <div class="category-link">
-                                    <a href="http://optimalgas.lotomsl.com/tablet">Tablets</a>
-                                </div>
-                            </li>
-
-                   <li class="category-item"> 
-                                <div class="category-link">
-                                    <a href="http://optimalgas.lotomsl.com/component">Комплектующие</a>
-                                    <div class="category-open">
-                                        <span class="triangle"></span>
-                                    </div>
-                                </div>
-                                <ul class="hidden-list js-slide-hidden">
-                                                                       <li><a href="http://optimalgas.lotomsl.com/component/web-camera">Веб камеры (0)</a></li>
-                                           <li><a href="http://optimalgas.lotomsl.com/component/mouse">Манипуляторы мышь (0)</a></li>
-                                           <li><a href="http://optimalgas.lotomsl.com/component/monitor">Мониторы (2)</a></li>
-                                           <li><a href="http://optimalgas.lotomsl.com/component/printer">Принтеры (0)</a></li>
-                                           <li><a href="http://optimalgas.lotomsl.com/component/scanner">Сканеры (0)</a></li>
-                                                                       </ul>
-                            </li>
-
-
-
-                     
-           
-
-                    <li class="category-item">
-                                <div class="category-link">
-                                    <a href="http://optimalgas.lotomsl.com/software">Софт</a>
-                                </div>
-                            </li>
-
-           
-
-                    <li class="category-item">
-                                <div class="category-link">
-                                    <a href="http://optimalgas.lotomsl.com/smartphone">Телефоны и PDA</a>
-                                </div>
-                            </li>
-
-           
-
-                    <li class="category-item">
-                                <div class="category-link">
-                                    <a href="http://optimalgas.lotomsl.com/camera">Камеры</a>
-                                </div>
-                            </li>
-
-                                               <li class="category-item active"> 
-                                <div class="category-link">
-                                    <a href="http://optimalgas.lotomsl.com/mp3-players">MP3 плееры</a>
-                                    <div class="category-open">
-                                        <span class="triangle"></span>
-                                    </div>
-                                </div>
-                                <ul class="hidden-list">
-                                                                       <li><a href="http://optimalgas.lotomsl.com/mp3-players/test4">test 4 (0)</a></li>
-                                                                                     <li><a href="http://optimalgas.lotomsl.com/mp3-players/test5">test 5 (0)</a></li>
-                                                                                     <li><a href="http://optimalgas.lotomsl.com/mp3-players/test6">test 6 (0)</a></li>
-                                                                                     <li><a href="http://optimalgas.lotomsl.com/mp3-players/test7">test 7 (0)</a></li>
-                                                                       </ul>
-                            </li>
-
-
-
-                     
-   
-                        </ul>
-                    </aside>  </aside>
-      <div class="goods-block">      <h1>test 4</h1>
-       <div class="empty-category">
-      
-
-                  <p>В данной категории нет товаров.</p>
-      <div class="buttons">
-        <div><a href="http://optimalgas.lotomsl.com/" class="btn btn-primary">Продолжить</a></div>
-      </div>
+                simplepage.init();
+            }
+            });
+        })(jQuery || $);
+    </script>
+        <form action="index.php?route=account/simpleaddress/insert" method="post" enctype="multipart/form-data" id="simplepage_form">    
+        <div class="simpleregister" id="simpleaddress">
+            <div class="simpleregister-block-content">
+                                  <fieldset class="form-horizontal">                                  <div class="input-row required">
+    <label>Имя</label>
+    <div>
+              <input type="text" name="address[firstname]" id="address_firstname" value="" placeholder="" data-reload-payment-form="true">
+                    <div class="simplecheckout-rule-group" data-for="address_firstname">
+                      <div style="display:none;" data-for="address_firstname" data-rule="byLength" class="simplecheckout-error-text simplecheckout-rule" data-length-min="1" data-length-max="32" data-required="true">Имя должно быть от 1 до 32 символов!</div>
+                  </div>
+                </div>
+ </div>                                  <div class="input-row required">
+    <label>Фамилия</label>
+    <div>
+              <input type="text" name="address[lastname]" id="address_lastname" value="" placeholder="" data-reload-payment-form="true">
+                    <div class="simplecheckout-rule-group" data-for="address_lastname">
+                      <div style="display:none;" data-for="address_lastname" data-rule="byLength" class="simplecheckout-error-text simplecheckout-rule" data-length-min="1" data-length-max="32" data-required="true">Фамилия должна быть от 1 до 32 символов!</div>
+                  </div>
+                </div>
+ </div>                                  <div class="input-row required">
+    <label>Регион</label>
+    <div>
+              <select name="address[zone_id]" id="address_zone_id" data-reload-payment-form="true">
+                      <option value="" selected="selected"> --- Выберите --- </option>
+                      <option value="149">Винница</option>
+                      <option value="132">Днепропетровск</option>
+                      <option value="133">Донецк</option>
+                      <option value="153">Житомир</option>
+                      <option value="152">Запорожье</option>
+                      <option value="134">Ивано-Франковск</option>
+                      <option value="139">Киев</option>
+                      <option value="138">Киевская область</option>
+                      <option value="137">Кировоград</option>
+                      <option value="140">Луганск</option>
+                      <option value="150">Луцк</option>
+                      <option value="141">Львов</option>
+                      <option value="142">Николаев</option>
+                      <option value="143">Одесса</option>
+                      <option value="144">Полтава</option>
+                      <option value="145">Ровно</option>
+                      <option value="147">Сумы</option>
+                      <option value="148">Тернополь</option>
+                      <option value="151">Ужгород</option>
+                      <option value="135">Харьков</option>
+                      <option value="154">Херсон</option>
+                      <option value="136">Хмельницкий</option>
+                      <option value="129">Черкассы</option>
+                      <option value="130">Чернигов</option>
+                      <option value="131">Черновцы</option>
+                  </select>
+                    <div class="simplecheckout-rule-group" data-for="address_zone_id">
+                      <div style="display:none;" data-for="address_zone_id" data-rule="notEmpty" class="simplecheckout-error-text simplecheckout-rule" data-not-empty="1" data-required="true">Выберите регион!</div>
+                  </div>
+                </div>
+ </div>                                  <div class="input-row required">
+    <label>Город</label>
+    <div>
+              <input type="text" name="address[city]" id="address_city" value="" placeholder="" data-reload-payment-form="true">
+                    <div class="simplecheckout-rule-group" data-for="address_city">
+                      <div style="display:none;" data-for="address_city" data-rule="byLength" class="simplecheckout-error-text simplecheckout-rule" data-length-min="2" data-length-max="128" data-required="true">Город должен быть от 2 до 128 символов!</div>
+                  </div>
+                </div>
+ </div>                                  <div class="input-row required">
+    <label>Адрес доставки / склад Новой почты</label>
+    <div>
+              <input type="text" name="address[address_1]" id="address_address_1" value="" placeholder="" data-reload-payment-form="true">
+                    <div class="simplecheckout-rule-group" data-for="address_address_1">
+                      <div style="display:none;" data-for="address_address_1" data-rule="byLength" class="simplecheckout-error-text simplecheckout-rule" data-length-min="3" data-length-max="128" data-required="true">Адрес должен быть от 3 до 128 символов!</div>
+                  </div>
+                </div>
+ </div>                                  <div class=" ">
+    <label>Основной адрес</label>
+    <div>
+            <div class="radio-group">
+                    <div class="radio-row">
+          <input type="radio" name="address[default]" id="address_default0" value="1" data-reload-payment-form="true">
+            <label for="address_default0">Да</label>
+             </div>
+                    <div class="radio-row">
+          <input type="radio" name="address[default]" id="address_default1" value="0" checked="checked" data-reload-payment-form="true">
+            <label for="address_default1">Нет</label>
+             </div>
+                </div>
+                      </div>
+ </div>                                  </fieldset>                                                  <input type="hidden" name="address[country_id]" id="address_country_id" value="220">                                  <input type="hidden" name="address[postcode]" id="address_postcode" value="">                                  <input type="hidden" name="address[current_address_id]" id="address_current_address_id" value="0">                            </div>
+            <div class="simpleregister-button-block buttons">
+                <div class="simpleregister-button-right">
+                    <a class="button btn-primary button_oc btn" data-onclick="submit" id="simpleregister_button_confirm"><span>Продолжить</span></a>
+                </div>
             </div>
-    </div>
+        </div>
+            </form>
 </div>
+</div>
+</div>
+</div>
+<script type="text/javascript"><!--
+$('#button-zakaz').on('click', function() {
+	$.ajax({
+		type: 'get',
+		url: '',
+		cache: false,
+		beforeSend: function() {
+			
+		},
+		complete: function() {
+		
+		},
+		success: function() {
+			location = '';
+		}
+	});
+});
+//--></script>
  <footer id="footer">
             <div class="container ">
                 <div class="column-holder">
@@ -390,16 +437,16 @@
                         <h5>Личный кабинет</h5>
                         <nav>
                             <ul class="nav-list">
-                                <li> <a href="#" class="login-link">Вход</a>
+                                <li> <a href="#" data-modal="#modal-login">Вход</a>
                                     <span>/</span>
-                                    <a href="#" class="login-link">регистрация</a></li>
-                                <li><a href="#">Корзина</a></li>
+                                    <a href="/simpleregister">регистрация</a></li>
+                                <li><a href="/simplecheckout">Корзина</a></li>
                             </ul>
                         </nav>
                     </section>
                     <section class="footer-column">
                         <h5>Задайте нам вопрос</h5>
-                        <form action="/index.php?route=information/contact" class="question-form method=" post"="" enctype="multipart/form-data">
+                        <form class="question-form" id="form1">
                             <div class="row">
                                 <input type="text" placeholder="Имя" name="name" value="" id="input-name" required="">
                             </div>
@@ -407,7 +454,8 @@
                                 <input type="email" placeholder="Электронный адрес" name="email" id="input-email" required="">
                             </div>
                             <div class="row">
-                                <input type="text" placeholder="Тема вопроса">
+                                <input type="text" placeholder="Тема вопроса" name="tema">
+                                <input type="hidden" name="metka" value="optimal">
                             </div>
                             <div class="row">
                                 <textarea cols="30" rows="10" placeholder="Ваше сообщение" name="enquiry" id="input-enquiry"></textarea>
@@ -470,44 +518,30 @@
             <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
         </form>
     </div>
-    <div class="modal cart-window" data-modal-window="" id="modal-cart">
-        <a class="close" data-modal-close="">×</a>
-        <h5>Корзина</h5>
-        <form action="#">
-<div id="cart"> 
-
-                                        
-                                        <div class="divider"></div>
-                                        <span class="result"><span>Итого:&nbsp;&nbsp;</span>Товаров 0 (0.00грн)</span>
-                                               <div class="cart-row footer-row">
-                <a href="#" class="cont-link" data-modal-close="">Продолжить покупки</a>
-          <a href="http://optimalgas.lotomsl.com/simplecheckout" class="btn btn-primary">Оформить заказ</a>
-            </div></div>
-</form>
-    </div>
     <div class="modal call-back-window" data-modal-window="" id="modal-call-back">
         <a class="close" data-modal-close="">×</a>
         <h5>ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</h5>
         <span>Заполните соответствующие поля и мы свяжемся с Вами в течение  нескольких часов</span>
-        <form action="#" class="reg-form">
+        <form action="#" class="reg-form" id="zvonok">
             <div class="modal-row">
                 <label for="call-tel">Номер телефона: *</label>
-                <input type="tel" id="call-tel" placeholder="Мобильный телефон" required="">
+                <input type="tel" id="call-tel" placeholder="Мобильный телефон" name="phone" required="">
             </div>
             <div class="modal-row">
                 <label for="name2">Ваше имя: *</label>
-                <input type="text" id="name2" placeholder="" required="">
+                <input type="text" id="name2" name="name" placeholder="" required="">
+                <input type="hidden" name="metka" value="optimal">
             </div>
             <div class="modal-row center-flex">
                 <button type="submit" class="btn btn-primary">Заказать звонок</button>
             </div>
         </form>
     </div>
-    <script async="" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaIl3sRnHH7g29FKAdvZSlum46EfQq7ns&amp;v=3.exp"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaIl3sRnHH7g29FKAdvZSlum46EfQq7ns&amp;v=3.exp"></script>
     <script src="build/js/vendor.js"></script>
     <script src="build/js/app.js"></script>
-    <script async="" src="build/js/custom-map.js"></script>
+    <script src="build/js/custom-map.js"></script>
+    <script src="build/js/script.js"></script>
 
 
-
-</main></div></body></html>
+</body></html>

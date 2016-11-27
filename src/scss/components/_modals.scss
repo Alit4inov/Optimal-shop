@@ -329,7 +329,6 @@ $container-max-width: 80em;
 	&.cart-window {
 	width: 580px;
 	padding: 40px 35px;
-	padding-bottom: 100px;
 	color: #333333;
 	@extend %clearfix;
 		@include media('<tablet') {

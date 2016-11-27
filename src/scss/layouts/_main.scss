@@ -159,6 +159,10 @@ main {
 	@include media('<tablet') {
 		width: 100%;
 	}
+	.empty-category {
+		text-align: center;
+		color: $dark-blue;
+	}
 }
 .tab-nav {
 	@extend %listreset;

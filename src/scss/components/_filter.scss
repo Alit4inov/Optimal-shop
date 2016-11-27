@@ -54,12 +54,6 @@
 		flex-direction: column;
 		text-align: right;
 	}
-	@include media('<tablet') {
-		text-align: center;
-	}
-		@include media('<phone') {
-
-	}
 }
 
 .select {

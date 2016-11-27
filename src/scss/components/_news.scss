@@ -108,4 +108,18 @@
 	margin: 0 auto;
 	margin-bottom: 30px;
 	}
+	ol {
+		color: $dark-blue;
+	}
+	.login-link {
+		color: $dark-blue;
+		font-size: 16px;
+		font-weight: 900;
+		transition: color .3s;
+		cursor: pointer;
+		text-decoration: underline;
+		&:hover {
+			color: $brand-orange;
+		}
+	}
 }
